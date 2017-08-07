@@ -6,3 +6,4 @@ lib/.sass-cache
 app/values/
 app/values/fb-setting.js
 server/lib/node_modules/
+server/.env
