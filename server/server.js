@@ -2,15 +2,12 @@ require('dotenv').config();
 const fs = require('fs'),
       request = require('request'),
       cheerio = require('cheerio'),
-      pageURL = 'http://www.themutinychicago.com/',
       host = process.env.PORT ? '0.0.0.0' : '127.0.0.1';
       port = process.env.PORT || 8080,
       cors_proxy = require('cors-anywhere'),
-      // twilio = require('twilio'),
-      // client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN),
       Storage = require('node-storage'),
       store = new Storage(__dirname + "/data/scrapedData.js"),
-      // origPrice = null;
+      pageURL = 'https://www.nytimes.com/',
 
 cors_proxy.createServer({
   originWhitelist: [], // Allow all origins
@@ -34,15 +31,34 @@ function scrapePage() {
   })
 }
 
+function parseItems(resHtml) {
+  return new Promise( (resolve, reject) => {
+    const $ = cheerio.load(resHtml),
+          storyCollection = $('article.story');
+          console.log("storyCollection", storyCollection);
+
+    storyCollection.toArray().forEach( (article) => {
+      const $story = $(article),
+            articleHeadline = $story.find('.story-heading').text(),
+            articleAuthor = $story.find('.byline').text(),
+            articleCopy = $story.find('.summary').text(),
+            articleLink = $story.find('.story-heading a').attr('href'),
+            articleId = $story.attr('id');
+
+			store.put(articleId, {articleHeadline, articleLink, articleAuthor, articleCopy});
+
+      console.log("new item stored?", store.get(articleId));
+      resolve(articleId)
+    })
+  });
+}
+
 //scrape the page
 scrapePage()
 .then( (resHtml) => {
 	console.log('html written to folder', resHtml);
-  // return parseItems(resHtml)
+  return parseItems(resHtml)
 })
-// .then( ({currentPrice}) => {
-//   comparePrice(currentPrice)
-// })
 .catch( (err) => {
   console.log("error", err );
 });
