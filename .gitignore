@@ -5,4 +5,4 @@ lib/.sass-cache
 .sass-cache
 app/values/
 app/values/fb-setting.js
-app/values/fb-setting.js
+server/lib/node_modules/

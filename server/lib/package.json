@@ -1,0 +1,19 @@
+{
+  "name": "spintrack-server",
+  "version": "1.0.0",
+  "description": "this is a server setup for some basic webscraping",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Roberts",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "cors-anywhere": "^0.4.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "request": "^2.81.0"
+  }
+}
