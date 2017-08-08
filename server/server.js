@@ -1,15 +1,17 @@
-require('dotenv').config();
-const fs = require('fs'),
-      request = require('request'),
-      cheerio = require('cheerio'),
-      host = process.env.PORT ? '0.0.0.0' : '127.0.0.1';
-      port = process.env.PORT || 8080,
-      cors_proxy = require('cors-anywhere'),
-      Storage = require('node-storage'),
-      store = new Storage(__dirname + "/data/scrapedData.js"),
-      pageURL = 'https://www.nytimes.com/',
+'use strict';
 
-cors_proxy.createServer({
+require('dotenv').config();
+const fs = require('fs');
+const request = require('request');
+const cheerio = require('cheerio');
+const host = process.env.PORT ? '0.0.0.0' : '127.0.0.1'; //ask Joe about this
+const port = process.env.PORT || 8080;
+const cors_proxy = require('cors-anywhere');
+const Storage = require('node-storage');
+const store = new Storage(__dirname + "/data/scrapedData.js");
+const pageURL = 'https://www.nytimes.com/';
+
+cors_proxy.createServer({ //TODO ask Joe about this
   originWhitelist: [], // Allow all origins
   removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
@@ -25,18 +27,16 @@ function scrapePage() {
       fs.writeFile(__dirname + '/html/scrapedPage.html', responseHtml, (err) => {
           if (err) console.log("error in write file", err);
           console.log('entire-page.html successfully written to HTML folder');
-          resolve(responseHtml)
-      })
-    })
-  })
+          resolve(responseHtml);
+      });
+    });
+  });
 }
 
 function parseItems(resHtml) {
   return new Promise( (resolve, reject) => {
     const $ = cheerio.load(resHtml),
           storyCollection = $('article.story');
-          // console.log("storyCollection", storyCollection);
-
     storyCollection.toArray().forEach( (article) => {
       let	source = pageURL,
           id = $(article).attr('id'),
@@ -48,18 +48,19 @@ function parseItems(resHtml) {
           	copy = $(article).find('.summary').next().text();
           }
       if ( id && copy && headline && link) {
+      	//TODO - change to store in FB
 				store.put(id, {headline, link, byline, copy});
 	      }
-	    })
-      resolve(resHtml)
+	    });
+      resolve(resHtml);
   });
 }
 
 //scrape the page
 scrapePage()
 .then( (resHtml) => {
-	console.log('html written to folder', resHtml);
-  return parseItems(resHtml)
+	console.log('html written to folder');
+  return parseItems(resHtml);
 })
 .catch( (err) => {
   console.log("error", err );
