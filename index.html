@@ -2,11 +2,31 @@
 <html lang="en">
 
 	<head>
-		<title></title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <title>SpinTracker</title>
+	  <link rel="stylesheet" type="text/css" href="./css/main.css">
 	</head>
 
-	<body>
+	<body ng-app="SpinTracker">
+
+		<div id="pageWrapper" ng-view></div>
+
+		<!-- dependencies -->
+	  <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+	  <script type="text/javascript" src="./lib/node_modules/tether/dist/js/tether.min.js"></script>
+	  <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+	  <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+	  <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+	  <!-- app -->
+	  <script type="text/javascript" src="./app/app.js"></script>
+	  <!-- providers -->
+	  <script type="text/javascript" src="./app/values/fbCreds.js"></script>
+
+	  <!-- controllers -->
 
 	</body>
-
 </html>
+
+
