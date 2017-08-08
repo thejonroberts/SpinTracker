@@ -35,21 +35,23 @@ function parseItems(resHtml) {
   return new Promise( (resolve, reject) => {
     const $ = cheerio.load(resHtml),
           storyCollection = $('article.story');
-          console.log("storyCollection", storyCollection);
+          // console.log("storyCollection", storyCollection);
 
     storyCollection.toArray().forEach( (article) => {
-      const $story = $(article),
-            articleHeadline = $story.find('.story-heading').text(),
-            articleAuthor = $story.find('.byline').text(),
-            articleCopy = $story.find('.summary').text(),
-            articleLink = $story.find('.story-heading a').attr('href'),
-            articleId = $story.attr('id');
-
-			store.put(articleId, {articleHeadline, articleLink, articleAuthor, articleCopy});
-
-      console.log("new item stored?", store.get(articleId));
-      resolve(articleId)
-    })
+      let	source = pageURL,
+          id = $(article).attr('id'),
+          headline = $(article).find('.story-heading').text(),
+          link = $(article).find('.story-heading a').attr('href'),
+          byline = $(article).find('.byline').text(),
+          copy = $(article).find('.summary').text();
+          if(!copy) {
+          	copy = $(article).find('.summary').next().text();
+          }
+      if ( id && copy && headline && link) {
+				store.put(id, {headline, link, byline, copy});
+	      }
+	    })
+      resolve(resHtml)
   });
 }
 
