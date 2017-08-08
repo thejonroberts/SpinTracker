@@ -1,18 +1,19 @@
 'use strict';
 
 require('dotenv').config();
+const fs = require('fs');
 const request = require('request');
 const cheerio = require('cheerio');
 const host = process.env.PORT ? '0.0.0.0' : '127.0.0.1'; //ask Joe about this
 const port = process.env.PORT || 8080;
 const cors_proxy = require('cors-anywhere');
-// require('firebase');
 const firebase = require('firebase');
 const firebaseURL = process.env.FB_DATABASE_URL;
 const FBconfig = {
 		apiKey: process.env.FB_API_KEY,
 		authDomain: process.env.FB_AUTH_DOMAIN
 	};
+
 firebase.initializeApp(FBconfig);
 
 cors_proxy.createServer({ //TODO ask Joe about this
@@ -81,10 +82,16 @@ function pushStoryToFB(storyObject) {
 	})
 }
 
+// function checkSourceUpdate(source_id) {
+// 	return new Promise( (resolve, reject) => {
+	// TODO
+// 	});
+// }
+
 //scrape the page
 scrapePage()
 .then( (resHtml) => {
-	console.log('html written to folder');
+	console.log('ITEMS SENT TO FIREBASE');
   return parseItems(resHtml);
 })
 .catch( (err) => {
