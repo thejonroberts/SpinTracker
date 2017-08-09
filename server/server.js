@@ -29,21 +29,21 @@ const pageURL = 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml';
 function scrapePage() {
   return new Promise( (resolve, reject) => {
     //make an HTTP request for the page to be scraped
-    request(`http://localhost:${port}/${pageURL}`, (error, response, responseHtml) => {
+    request(`http://localhost:${port}/${pageURL}`, (error, response, responseXml) => {
       if (error) { console.log("error", error); reject(); };
       //write the entire scraped page to the local file system
-      // fs.writeFile(__dirname + '/html/scrapedFeed.xml', responseHtml, (err) => {
-      //     if (err) console.log("error in write file", err);
-      //     console.log('entire-page.html successfully written to HTML folder');
-      // });
-          resolve(responseHtml);
+      fs.writeFile(__dirname + '/data/scrapedFeed.xml', responseXml, (err) => {
+          if (err) console.log("error in write file", err);
+          console.log('entire-page.html successfully written to HTML folder');
+      });
+          resolve(responseXml);
     });
   });
 }
 
-function parseItems(resHtml) {
+function parseItems(resXML) {
   return new Promise( (resolve, reject) => {
-    const $ = cheerio.load(resHtml, {
+    const $ = cheerio.load(resXML, {
 					    	normalizeWhitespace: true,
 					    	xmlMode: true});
     let source_id = "001"; //id for NYT
@@ -70,7 +70,7 @@ function parseItems(resHtml) {
       // }  //for date check
     });
     //TODO change to write to FB
-    resolve(resHtml);
+    resolve(resXML);
   });
 }
 

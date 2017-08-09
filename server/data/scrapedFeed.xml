@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Home Page</title>
+    <link>http://www.nytimes.com/pages/index.html?partner=rss&amp;emc=rss</link>
+    <atom:link rel="self" type="application/rss+xml" href="http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"/>
+    <description/>
+    <language>en-us</language>
+    <copyright>Copyright 2017  The New York Times Company</copyright>
+    <lastBuildDate>Wed, 09 Aug 2017 02:10:19 GMT </lastBuildDate>
+    <image>
+      <title>NYT &gt; Home Page</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>http://www.nytimes.com/pages/index.html?partner=rss&amp;emc=rss</link>
+    </image>
+    <item>
+      <title>Trump Threatens &#x2018;Fire and Fury&#x2019; Against North Korea if It Endangers U.S.</title>
+      <link>https://www.nytimes.com/2017/08/08/world/asia/north-korea-un-sanctions-nuclear-missile-united-nations.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/asia/north-korea-un-sanctions-nuclear-missile-united-nations.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/asia/north-korea-un-sanctions-nuclear-missile-united-nations.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09nkorea-2/09nkorea-2-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Workers loading seafood in Rajin, North Korea, in 2013. The new sanctions ban United Nations member countries from importing seafood from the North, as part of penalties aimed at impeding its ability to pay for its weapons programs.</media:description>
+      <media:credit>David Guttenfelder/Associated Press</media:credit>
+      <description>North Korea hinted that it would conduct another nuclear or missile test, as it has often done in response to past United Nations sanctions.</description>
+      <dc:creator>PETER BAKER and CHOE SANG-HUN</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 02:03:43 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Nuclear Tests</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Embargoes and Sanctions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">North Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Missiles and Missile Defense Systems</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Nuclear Weapons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Security Council (UN)</category>
+    </item>
+    <item>
+      <title>Trump Threatens North Korea With &#x2018;Fire and Fury&#x2019;</title>
+      <link>https://www.nytimes.com/video/us/politics/100000005346140/north-korea-trump-threat-fire-fury.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/video/us/politics/100000005346140/north-korea-trump-threat-fire-fury.html</guid>
+      <description>&#x201C;North Korea best not make any more threats to the United States,&#x201D; President Trump said after the isolated nuclear-armed country criticized the United States earlier in the day.</description>
+      <dc:creator/>
+      <pubDate>Tue, 08 Aug 2017 20:30:45 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/nyt_geo">North Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/des">Nuclear Weapons</category>
+    </item>
+    <item>
+      <title>North Korea&#x2019;s Alarmed Neighbors Consider Deploying Deadlier Weapons</title>
+      <link>https://www.nytimes.com/2017/08/08/world/asia/north-korea-japan-missile-south.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/asia/north-korea-japan-missile-south.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/asia/north-korea-japan-missile-south.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09Japan/09Japan-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Japanese tanks during a 2016 exercise in Gotemba, southwest of Tokyo. Japan&#x2019;s government said on Tuesday that North Korea may have already acquired nuclear warheads.</media:description>
+      <media:credit>Eugene Hoshiko/Associated Press</media:credit>
+      <description>In Japan and South Korea, politicians are calling for new military capabilities, in what could become a regional arms race.</description>
+      <dc:creator>JONATHAN SOBLE and CHOE SANG-HUN</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 01:14:51 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Nuclear Weapons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Japan</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">North Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+    </item>
+    <item>
+      <title>Right and Left React to the Tensions With North Korea</title>
+      <link>https://www.nytimes.com/2017/08/08/us/politics/right-and-left-react-to-the-tensions-with-north-korea.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/us/politics/right-and-left-react-to-the-tensions-with-north-korea.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/us/politics/right-and-left-react-to-the-tensions-with-north-korea.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/us/09partisan-picks-korea-missile/09partisan-picks-korea-missile-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>An image released by the North Korean government was said to show a missile launch last month.</media:description>
+      <media:credit>Korean Central News Agency</media:credit>
+      <description>Read about how the other side thinks: Writers from across the political spectrum examine the growing tensions with North Korea.</description>
+      <dc:creator>ANNA DUBENKO</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 01:33:34 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">North Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Arms Control and Limitation and Disarmament</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+    </item>
+    <item>
+      <title>Climate Report Could Force Trump to Choose Between Science and His Base</title>
+      <link>https://www.nytimes.com/2017/08/08/us/politics/climate-trump-scientists-supporters.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/us/politics/climate-trump-scientists-supporters.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/us/politics/climate-trump-scientists-supporters.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/climate/09CLIMATE1/09CLIMATE1-alt-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>President Trump at a meeting on Tuesday at the Trump National Golf Club in Bedminster, N.J.</media:description>
+      <media:credit>Al Drago for The New York Times</media:credit>
+      <description>The looming publication of a climate report again raises a contentious policy issue that has deeply divided President Trump&#x2019;s closest advisers since he arrived in the Oval Office.</description>
+      <dc:creator>MICHAEL D. SHEAR and BRAD PLUMER</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 01:21:41 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United Nations Framework Convention on Climate Change</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Global Warming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">US Global Change Research Program (USGCRP)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">National Academy of Sciences</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+    </item>
+    <item>
+      <title>North Korea, Jacob Zuma, Glen Campbell: Your Tuesday Evening Briefing</title>
+      <link>https://www.nytimes.com/2017/08/08/briefing/north-korea-jacob-zuma-glen-campbell.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/briefing/north-korea-jacob-zuma-glen-campbell.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/briefing/north-korea-jacob-zuma-glen-campbell.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/briefing/08eveningss-slide-6J43/08eveningss-slide-6J43-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit>Al Drago for The New York Times</media:credit>
+      <description>Here&#x2019;s what you need to know at the end of the day.</description>
+      <dc:creator>KAREN ZRAICK and SANDRA STEVENSON</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 00:42:53 GMT</pubDate>
+    </item>
+    <item>
+      <title>Asia and Australia Edition: North Korea, Google, Jacob Zuma: Your Wednesday Briefing</title>
+      <link>https://www.nytimes.com/2017/08/08/briefing/jacob-zuma-google-north-korea.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/briefing/jacob-zuma-google-north-korea.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/briefing/jacob-zuma-google-north-korea.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/briefing/09BRIEFING-asia-slide-XYIV/09BRIEFING-asia-slide-XYIV-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description/>
+      <media:credit>Branden Camp/Associated Press</media:credit>
+      <description>Here&#x2019;s what you need to know to start your day.</description>
+      <dc:creator>CHARLES McDERMID</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 00:24:21 GMT</pubDate>
+    </item>
+    <item>
+      <title>California Today: California Today: The Dominating Dodgers</title>
+      <link>https://www.nytimes.com/2017/08/08/us/california-today-la-dodgers-dominating.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/us/california-today-la-dodgers-dominating.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/us/california-today-la-dodgers-dominating.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/us/08California-Today-yu/08California-Today-yu-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Yu Darvish, among the most talented pitchers in baseball, is the latest star to join the Dodgers.</media:description>
+      <media:credit>Kevin C. Cox/Getty Images</media:credit>
+      <description>Tuesday: The Dodgers look unstoppable, a stormy semester at Claremont Colleges, and grappling over California&#x2019;s right-to-die law.</description>
+      <dc:creator>MIKE McPHATE</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 12:27:47 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_keyword">California Today</category>
+    </item>
+    <item>
+      <title>The Culture Wars Have Come to Silicon Valley</title>
+      <link>https://www.nytimes.com/2017/08/08/technology/the-culture-wars-have-come-to-silicon-valley.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/technology/the-culture-wars-have-come-to-silicon-valley.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/technology/the-culture-wars-have-come-to-silicon-valley.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/business/09VALLEY1/09VALLEY1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Peter Thiel, left, and Reed Hastings. Mr. Thiel, a member of Facebook&#x2019;s board of directors, was told by Mr. Hastings, the chief executive of Netflix, that he would receive a negative evaluation of his performance on the board because of his support for Donald J. Trump.</media:description>
+      <media:credit>Photo Illustration by Andy Chen/The New York Times. Photos by Andrew White for The New York Times; Justin Sullivan, via Getty Images</media:credit>
+      <description>After Google fired an engineer who wrote an anti-diversity manifesto, the tech industry is under the microscope for penalizing dissenting opinions.</description>
+      <dc:creator>NICK WINGFIELD</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 23:47:06 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Silicon Valley (Calif)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Facebook Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Freedom of Speech and Expression</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Damore, James</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Luckey, Palmer</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Thiel, Peter A</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Clinton, Hillary Rodham</category>
+    </item>
+    <item>
+      <title>Contentious Memo Strikes Nerve Inside Google and Out</title>
+      <link>https://www.nytimes.com/2017/08/08/technology/google-engineer-fired-gender-memo.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/technology/google-engineer-fired-gender-memo.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/technology/google-engineer-fired-gender-memo.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/business/09google1/09google1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Google has faced many questions about the number of women employed there as engineers and managers.</media:description>
+      <media:credit>Jeff Chiu/Associated Press</media:credit>
+      <description>The memo, written by a Google engineer who was later fired, enraged diversity advocates and also served as a rallying cry for conservatives and the alt-right.</description>
+      <dc:creator>DAISUKE WAKABAYASHI</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 23:18:54 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Google Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Silicon Valley (Calif)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Workplace Environment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Damore, James</category>
+    </item>
+    <item>
+      <title>As Investigations Intensify, Israel Imagines Life After Netanyahu</title>
+      <link>https://www.nytimes.com/2017/08/08/world/middleeast/netanyahu-israel-investigations.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/middleeast/netanyahu-israel-investigations.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/middleeast/netanyahu-israel-investigations.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09Netanyahu1/09Netanyahu1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Prime Minister Benjamin Netanyahu arriving at a cabinet meeting last month. Mr. Netanyahu has dominated the Israeli political scene for years.</media:description>
+      <media:credit>Pool photo by Abir Sultan</media:credit>
+      <description>As an ex-aide turns state&#x2019;s witness, Israelis across the spectrum are trying on the idea of the curtain coming down on Mr. Netanyahu&#x2019;s career.</description>
+      <dc:creator>ISABEL KERSHNER</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 23:44:30 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Israel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Netanyahu, Benjamin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Likud Party (Israel)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Corruption (Institutional)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Bribery and Kickbacks</category>
+    </item>
+    <item>
+      <title>Kenyan Presidential Election Is Peaceful; Violence Feared Over Results</title>
+      <link>https://www.nytimes.com/2017/08/08/world/africa/kenya-election-president-kenyatta-odinga.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/africa/kenya-election-president-kenyatta-odinga.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/africa/kenya-election-president-kenyatta-odinga.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09Kenya1/09Kenya1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Lines at a polling station on Tuesday in Kibera, Kenya&#x2019;s biggest slum.</media:description>
+      <media:credit>Andrew Renneisen/Getty Images</media:credit>
+      <description>There were few technical glitches compared to the previous election, in 2013, when many voting machines malfunctioned.</description>
+      <dc:creator>KIMIKO de FREYTAS-TAMURA</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 01:36:44 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-multimedia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Voter Registration and Requirements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kenyatta, Uhuru Muigai</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Odinga, Raila</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Kenya</category>
+    </item>
+    <item>
+      <title>Jacob Zuma Beats Back No-Confidence Vote in South Africa</title>
+      <link>https://www.nytimes.com/2017/08/08/world/africa/jacob-zuma-south-africa-no-confidence-vote.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/africa/jacob-zuma-south-africa-no-confidence-vote.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/africa/jacob-zuma-south-africa-no-confidence-vote.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09safrica/09safrica-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Opposition members in Cape town marched to support a no-confidence motion against President Jacob Zuma of South Africa on Tuesday.</media:description>
+      <media:credit>Gianluigi Guercia/Agence France-Presse &#x2014; Getty Images</media:credit>
+      <description>The motion failed, with 177 yes votes and 198 no votes. Mr. Zuma has faced strong corruption allegations.</description>
+      <dc:creator>KIMON de GREEF and SEWELL CHAN</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 19:16:53 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Zuma, Jacob G</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Africa</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Corruption (Institutional)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Legislatures and Parliaments</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">African National Congress</category>
+    </item>
+    <item>
+      <title>12 Killed During Church Service in Nigeria; Pope Condemns Violence</title>
+      <link>https://www.nytimes.com/2017/08/08/world/africa/nigeria-ozubulu-church-attack.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/africa/nigeria-ozubulu-church-attack.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/africa/nigeria-ozubulu-church-attack.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09Nigeria1/09Nigerisa1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A still from a video of St. Philip&#x2019;s Church in Anambra, Nigeria, after it was attacked. The police commissioner for Anambra State, Garba Umar, said the shootings there were &#x201C;not unconnected to a kind of a &#x2018;gang war.&#x2019;&#x201D;</media:description>
+      <media:credit>Channels Tv, via Reuters</media:credit>
+      <description>The shootings were likely to be linked to drug gangs active in both Nigeria and South Africa, a police official said.</description>
+      <dc:creator>TONY IYARE</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 11:40:44 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Churches (Buildings)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Nigeria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Murders, Attempted Murders and Homicides</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Drug Abuse and Traffic</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Roman Catholic Church</category>
+    </item>
+    <item>
+      <title>Northwestern Professor Held in Stabbing Death That Mystified Chicago</title>
+      <link>https://www.nytimes.com/2017/08/08/us/northwestern-professor-oxford-surrender.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/us/northwestern-professor-oxford-surrender.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/us/northwestern-professor-oxford-surrender.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/us/08xp-chicago2/08xp-chicago2-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Wyndham Lathem, an associate professor at Northwestern University, was arrested on Friday in California.</media:description>
+      <media:credit>Alameda County Sheriff's Office, via Associated Press</media:credit>
+      <description>Wyndham Lathem and another man were arrested in the killing of Trenton Cornell-Duranleau, a hairstylist, after a far-reaching manhunt.</description>
+      <dc:creator>MATTHEW HAAG</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 13:56:55 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Chicago (Ill)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Crime and Criminals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Northwestern University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Oxford University</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">California</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fugitives</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Lathem, Wyndham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Cornell-Duranleau, Trenton</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Warren, Andrew</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Murders, Attempted Murders and Homicides</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Illinois</category>
+    </item>
+    <item>
+      <title>Hackers Demand Millions in Bitcoin for Stolen HBO Files</title>
+      <link>https://www.nytimes.com/2017/08/07/business/hackers-demand-ransom-for-stolen-hbo-files.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/07/business/hackers-demand-ransom-for-stolen-hbo-files.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/07/business/hackers-demand-ransom-for-stolen-hbo-files.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/business/08HBO/08HBO-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Nikolaj Coster-Waldau as Jaime Lannister in an episode of &#x201C;Game of Thrones,&#x201D; which was targeted in a recent hack of HBO. </media:description>
+      <media:credit>Macall B. Polay/HBO, via Associated Press</media:credit>
+      <description>Using the name &#x201C;Mr. Smith,&#x201D; the hackers released a fresh cache of data online, including &#x201C;Game of Thrones&#x201D; scripts and internal documents, and promised to upload more.</description>
+      <dc:creator>THE ASSOCIATED PRESS</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 02:36:52 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cyberattacks and Hackers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Home Box Office</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Plepler, Richard</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Robberies and Thefts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Sony Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Game of Thrones (TV Program)</category>
+    </item>
+    <item>
+      <title>Punch With Pakistani Girls at a Karachi Boxing Club</title>
+      <link>https://www.nytimes.com/video/world/asia/100000005030850/pakistani-girls-at-a-karachi-boxing-club.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/video/world/asia/100000005030850/pakistani-girls-at-a-karachi-boxing-club.html</guid>
+      <description>Boxing as a competitive sport for women has become increasingly popular in Pakistan in recent years. Put on your gloves and go a round in 360.</description>
+      <dc:creator/>
+      <pubDate>Tue, 08 Aug 2017 09:00:03 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/nyt_geo">Karachi (Pakistan)</category>
+      <category domain="http://www.nytimes.com/namespaces/des">Women and Girls</category>
+      <category domain="http://www.nytimes.com/namespaces/des">Boxing</category>
+    </item>
+    <item>
+      <title>Your Daily Mini Crossword</title>
+      <link>http://www.nytimes.com/crosswords/game/mini?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">http://www.nytimes.com/crosswords/game/mini</guid>
+      <atom:link rel="standout" href="http://www.nytimes.com/crosswords/game/mini?partner=rss&amp;emc=rss"/>
+      <description>Solve a bite-size crossword in just a few minutes.</description>
+      <dc:creator/>
+      <pubDate>Tue, 14 Mar 2017 22:01:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>Glen Campbell, Whose Hit Songs Bridged Country and Pop, Dies at 81</title>
+      <link>https://www.nytimes.com/2017/08/08/arts/music/glen-campbell-dead.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/arts/music/glen-campbell-dead.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/arts/music/glen-campbell-dead.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/multimedia/08campbell-obit/08campbell-obit-moth-v2.jpg" medium="image" height="151" width="151"/>
+      <media:description>Glen Campbell playing guitar as host of the NBC television show &#x201C;The Midnight Special&#x201D; in 1975.</media:description>
+      <media:credit>NBC, via Getty Images</media:credit>
+      <description>A sharecropper&#x2019;s son who became a recording, television and movie star, Mr. Campbell also battled alcohol and drugs and became a public face of Alzheimer&#x2019;s disease.</description>
+      <dc:creator>MICHAEL POLLAK</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 01:17:41 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Campbell, Glen</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Obituaries)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Music</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Alzheimer's Disease</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Glen Campbell: I'll Be Me (Movie)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Alcohol Abuse</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Wichita Lineman (Song)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">By the Time I Get to Phoenix (Song)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">True Grit (Movie)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jimmy Webb</category>
+    </item>
+    <item>
+      <title>At Walmart Academy, Training Better Managers. But With a Better Future?</title>
+      <link>https://www.nytimes.com/2017/08/08/business/walmart-academy-employee-training.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/business/walmart-academy-employee-training.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/business/walmart-academy-employee-training.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/insider/00walmart-1/00walmart-test2-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Ashley VanHorn, the dry goods manager in the grocery department, stocking shelves at the Walmart near Fulton, N.Y. She recently graduated from the store&#x2019;s Walmart Academy.</media:description>
+      <media:credit>Roger Kisby for The New York Times</media:credit>
+      <description>A new program for store supervisors and department managers may make them better employees but may not help them reach the middle class.</description>
+      <dc:creator>MICHAEL CORKERY</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 23:12:07 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-multimedia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Labor and Jobs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wages and Salaries</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Shopping and Retail</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Vocational Training</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Walmart Stores Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Nestle SA</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Fulton, NY</category>
+    </item>
+    <item>
+      <title>Meet the Graduates of Walmart Academy</title>
+      <link>https://www.nytimes.com/2017/08/08/insider/walmart-academy-fulton-factory.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/insider/walmart-academy-fulton-factory.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/insider/walmart-academy-fulton-factory.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/insider/00walmart-1/00walmart-test2-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Ashley VanHorn, the dry goods manager in the grocery department, stocking shelves at the Walmart near Fulton, N.Y. She recently graduated from the store&#x2019;s Walmart Academy.</media:description>
+      <media:credit>Roger Kisby for The New York Times</media:credit>
+      <description>Our reporter explains how a story about the retailer&#x2019;s training program didn&#x2019;t turn out as he expected &#x2014; instead he learned about the trainees themselves.</description>
+      <dc:creator>MICHAEL CORKERY</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 23:22:05 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">New York Times</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Walmart Stores Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Fulton, N.Y.</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Vocational Training</category>
+    </item>
+    <item>
+      <title>Gun Rights and Foster Care Restrictions Collide in Michigan</title>
+      <link>https://www.nytimes.com/2017/08/08/us/michigan-gun-foster-care.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/us/michigan-gun-foster-care.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/us/michigan-gun-foster-care.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/07/us/00foster1/00foster1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Bill Johnson with his holstered handgun. He and his wife, Jill, are suing Michigan, which would bar them from carrying concealed weapons if they became their grandson&#x2019;s foster parents.</media:description>
+      <media:credit>Tim Gruber for The New York Times</media:credit>
+      <description>A couple have challenged a state law that bars foster parents from carrying concealed weapons in a case that may have nationwide implications.</description>
+      <dc:creator>SHERYL GAY STOLBERG</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 17:59:57 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Gun Control</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Foster Care</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Firearms</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">State Legislatures</category>
+    </item>
+    <item>
+      <title>Economic Scene: The Danger From Low-Skilled Immigrants: Not Having Them</title>
+      <link>https://www.nytimes.com/2017/08/08/business/economy/immigrants-skills-economy-jobs.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/business/economy/immigrants-skills-economy-jobs.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/business/economy/immigrants-skills-economy-jobs.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/business/09PORTER3/09PORTER3-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Thousands of Mexican workers cross the border legally each night from Mexico into California, where they pick up work as agricultural day laborers in California&#x2019;s Imperial Valley.</media:description>
+      <media:credit>John Moore/Getty Images</media:credit>
+      <description>A wealth of research shows that the economy is lifted by foreign workers, providing new opportunities for the native-born.</description>
+      <dc:creator>EDUARDO PORTER</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 00:17:20 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Labor and Jobs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Foreign Workers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Immigration and Emigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Economy</category>
+    </item>
+    <item>
+      <title>Books of The Times: In &#x2018;Home Fire,&#x2019; Lives Touched by Immigration, Jihad and Family Love</title>
+      <link>https://www.nytimes.com/2017/08/08/books/review-home-fire-kamila-shamsie.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/books/review-home-fire-kamila-shamsie.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/books/review-home-fire-kamila-shamsie.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/arts/09BOOKSHAMSIE1/09BOOKSHAMSIE1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>The author Kamila Shamsie.</media:description>
+      <media:credit>Zain Mustafa</media:credit>
+      <description>Three British siblings of Pakistani descent are at the center of Kamila Shamsie&#x2019;s ingenious new novel, which builds to a stunning conclusion.</description>
+      <dc:creator>DWIGHT GARNER</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 20:32:58 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Home Fire (Book)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Shamsie, Kamila</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Books and Literature</category>
+    </item>
+    <item>
+      <title>Impossible Burger&#x2019;s &#x2018;Secret Sauce&#x2019; Highlights Challenges of Food Tech</title>
+      <link>https://www.nytimes.com/2017/08/08/business/impossible-burger-food-meat.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/business/impossible-burger-food-meat.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/business/impossible-burger-food-meat.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/business/09burger1/09burger1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>An Impossible Burger, which resembles meat but is made of plant products.</media:description>
+      <media:credit>Jason Henry for The New York Times</media:credit>
+      <description>The start-up is finding out what happens when a fast-moving venture capital business runs into the staid world of government regulation.</description>
+      <dc:creator>STEPHANIE STROM</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 00:10:22 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Food</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hamburgers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Regulation and Deregulation of Industry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Meat</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Impossible Foods Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Food and Drug Administration</category>
+    </item>
+    <item>
+      <title>Sports of The Times: Justin Gatlin Is an Athlete of His Time, Not a Villain</title>
+      <link>https://www.nytimes.com/2017/08/08/sports/justin-gatlin-doping.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/sports/justin-gatlin-doping.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/sports/justin-gatlin-doping.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/sports/09POWELLweb1/09POWELLweb1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Justin Gatlin, center, stood with the silver medalist Christian Coleman, left, and the bronze medalist Usain Bolt at a medal ceremony at the world championships on Sunday in London.</media:description>
+      <media:credit>Martin Meissner/Associated Press</media:credit>
+      <description>Fans showered Gatlin with boos after he ruined Usain Bolt&#x2019;s farewell race, but the outrage edges toward the absurd.</description>
+      <dc:creator>MICHAEL POWELL</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 00:00:14 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Doping (Sports)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Track and Field</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Gatlin, Justin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Bolt, Usain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Coe, Sebastian</category>
+    </item>
+    <item>
+      <title>Base Instinct: The Political Payoff of Making Whites Feel Like a Minority</title>
+      <link>https://www.nytimes.com/2017/08/08/upshot/the-political-payoff-of-making-whites-feel-like-a-minority.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/upshot/the-political-payoff-of-making-whites-feel-like-a-minority.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/upshot/the-political-payoff-of-making-whites-feel-like-a-minority.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/upshot/08up-whitevote1/08up-whitevote1-moth-v2.jpg" medium="image" height="151" width="151"/>
+      <media:description>A senior White House adviser, Stephen Miller, said that the Statue of Liberty is a &#x201C;symbol of American liberty lighting the world&#x201D; but that it had little to do with immigrants.</media:description>
+      <media:credit>Bebeto Matthews/Associated Press</media:credit>
+      <description>Survey data suggest that white Trump voters tend to feel a sense of threat about being discriminated against.</description>
+      <dc:creator>LYNN VAVRECK</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 07:30:23 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Race and Ethnicity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Whites</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Immigration and Emigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2016</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Foreign Workers</category>
+    </item>
+    <item>
+      <title>Australian Leaders Plan Vote on Same-Sex Marriage, One Way or Another</title>
+      <link>https://www.nytimes.com/2017/08/08/world/australia/same-sex-marriage-liberal-party.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/world/australia/same-sex-marriage-liberal-party.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/world/australia/same-sex-marriage-liberal-party.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/world/09oz-gaymarriage-1/09oz-gaymarriage-1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>A march in support of same-sex marriage in Sydney this week. Polls show that the majority of Australians believe same-sex marriage should be legalized.</media:description>
+      <media:credit>Peter Parks/Agence France-Presse &#x2014; Getty Images</media:credit>
+      <description>Liberal Party officials say that if the Senate doesn&#x2019;t open the polls for a nationwide vote on same-sex marriage, Australians will cast advisory ballots by mail.</description>
+      <dc:creator>JACQUELINE WILLIAMS and DAMIEN CAVE</dc:creator>
+      <pubDate>Wed, 09 Aug 2017 00:34:25 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Australia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/mdes">Same-Sex Marriage, Civil Unions and Domestic Partnerships</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Law and Legislation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Referendums</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Turnbull, Malcolm (1954- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Legislatures and Parliaments</category>
+    </item>
+    <item>
+      <title>An Extreme 5,700-Mile Bike Race Across Russia Struggles to Keep Women in the Pack</title>
+      <link>https://www.nytimes.com/2017/08/08/sports/trans-siberian-race-russia.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/sports/trans-siberian-race-russia.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/sports/trans-siberian-race-russia.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/sports/09xp-trans10/0804TranSiberia_ss-slide-DPCJ-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>From left, Peter Sandholt of Denmark, Marcelo Soares of Brazil and Pierre Bischoff of Austria during the 11th stage of the Red Bull Trans-Siberian Extreme race.</media:description>
+      <media:credit>Pool photo by Denis Klero</media:credit>
+      <description>Organizers of the Trans-Siberian Extreme race are trying to make the event more attractive to women, after the two riding this year dropped out early.</description>
+      <dc:creator>CHRISTINE HAUSER</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 23:35:14 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Bicycles and Bicycling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women and Girls</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Moscow (Russia)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+    </item>
+    <item>
+      <title>As Appetite for Soccer in U.S. Grows, So Does M.L.S.</title>
+      <link>https://www.nytimes.com/2017/08/08/sports/soccer/mls-expansion-nashville-cincinnati.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/sports/soccer/mls-expansion-nashville-cincinnati.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/sports/soccer/mls-expansion-nashville-cincinnati.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/07/29/sports/00mlsexpansion1/00mlsexpansion1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>M.L.S. Commissioner Don Garber was greeted by cardboard cutouts of himself last year when he visited Sacramento, one of a dozen cities vying for an expansion team in the league.</media:description>
+      <media:credit>Marc Kallweit</media:credit>
+      <description>The league, which will add a new team in Los Angeles next year and is close to approving another in Miami, is vetting a dozen other cities for a planned expansion.</description>
+      <dc:creator>KEN BELSON</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 16:16:35 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Soccer</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Major League Soccer</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Garber, Don</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Cincinnati (Ohio)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Nashville (Tenn)</category>
+    </item>
+    <item>
+      <title>Free Alaskan Salmon: Just Bring a Net and Expect a Crowd</title>
+      <link>https://www.nytimes.com/2017/08/07/dining/sockeye-salmon-fishing-in-alaska.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/07/dining/sockeye-salmon-fishing-in-alaska.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/07/dining/sockeye-salmon-fishing-in-alaska.html?partner=rss&amp;emc=rss"/>
+      <description>Amateurs pack the shores of the Kenai River, perhaps the most colorful, and contentious, fishing spot in America.</description>
+      <dc:creator>JULIA O'MALLEY</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 14:31:36 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Salmon</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fishing, Sport</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fishing, Commercial</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Kenai Peninsula (Alaska)</category>
+    </item>
+    <item>
+      <title>David Letterman Will Return to TV in a New Netflix Series</title>
+      <link>https://www.nytimes.com/2017/08/08/arts/television/david-letterman-netflix-new-series.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/arts/television/david-letterman-netflix-new-series.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/arts/television/david-letterman-netflix-new-series.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/arts/09LETTERMAN/09LETTERMAN-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>David Letterman</media:description>
+      <media:credit>Damon Winter/The New York Times</media:credit>
+      <description>Mr. Letterman, the innovative late-night host, is preparing a program that will feature long-form interviews and his explorations of the wider world.</description>
+      <dc:creator>DAVE ITZKOFF</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 20:13:44 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Television</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Letterman, David</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Netflix Inc</category>
+    </item>
+    <item>
+      <title>A Word With: 13 Shows. No Repeats. Trey Anastasio on How Phish Pulled Off the &#x2018;Baker&#x2019;s Dozen.&#x2019;</title>
+      <link>https://www.nytimes.com/2017/08/08/arts/music/phish-trey-anastasio-bakers-dozen-interview.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/arts/music/phish-trey-anastasio-bakers-dozen-interview.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/arts/music/phish-trey-anastasio-bakers-dozen-interview.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/arts/09trey1/09trey1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Trey Anastasio of Phish said the band prepared for its 13-night residency, but in the end the shows were &#x201C;a blur.&#x201D;</media:description>
+      <media:credit>Chad Batka for The New York Times</media:credit>
+      <description>The guitarist and singer explains how the band prepped for its longest residency, picked out its covers &#x2014; and then ditched all of its plans.</description>
+      <dc:creator>JESSE JARNOW</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 15:47:36 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pop and Rock Music</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Phish (Music Group)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Madison Square Garden</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Anastasio, Trey</category>
+    </item>
+    <item>
+      <title>4,000 Kilometers, 10 Months: One Australian&#x2019;s March for Indigenous Rights</title>
+      <link>https://www.nytimes.com/2017/08/07/world/australia/clinton-pryor-aboriginal-walk.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/07/world/australia/clinton-pryor-aboriginal-walk.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/07/world/australia/clinton-pryor-aboriginal-walk.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/08/world/08pryor-2/08pryor-2-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Clinton Pryor on the Princes Highway near the town of Ulladulla last week. He said he started the trek partly to raise awareness about the forced closing of remote Aboriginal communities by the government.</media:description>
+      <media:credit>Brook Mitchell for The New York Times</media:credit>
+      <description>Clinton Pryor is walking across the country to protest the treatment of Indigenous Australians, but the government has yet to heed calls for greater inclusion of Australia&#x2019;s First Peoples.</description>
+      <dc:creator>DAMIEN CAVE</dc:creator>
+      <pubDate>Mon, 07 Aug 2017 11:37:34 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Pryor, Clinton</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Aborigines</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Australia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Homeless Persons</category>
+    </item>
+    <item>
+      <title>Review: At Vail, Female Choreographers Feed the Mighty River of Dance</title>
+      <link>https://www.nytimes.com/2017/08/08/arts/dance/vail-female-choreographers-now-premieres-review-michelle-dorrance.html?partner=rss&amp;emc=rss</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2017/08/08/arts/dance/vail-female-choreographers-now-premieres-review-michelle-dorrance.html</guid>
+      <atom:link rel="standout" href="https://www.nytimes.com/2017/08/08/arts/dance/vail-female-choreographers-now-premieres-review-michelle-dorrance.html?partner=rss&amp;emc=rss"/>
+      <media:content url="https://static01.nyt.com/images/2017/08/09/arts/09vail-web1/09vail-web1-moth.jpg" medium="image" height="151" width="151"/>
+      <media:description>Michelle Dorrance and Dario Natarelli in Ms. Dorrance&#x2019;s &#x201C;we seem to be more than one.&#x201D;</media:description>
+      <media:credit>Erin Baiano </media:credit>
+      <description>Tap, jookin, pointwork and more: &#x201C;NOW: Premieres&#x201D; presented commissions by Michelle Dorrance, Lauren Lovette, Claudia Schreier and Pam Tanowitz.</description>
+      <dc:creator>ALASTAIR MACAULAY</dc:creator>
+      <pubDate>Tue, 08 Aug 2017 20:32:47 GMT</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Dancing</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org_all">Vail Dance Festival</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_keyword">NOW: Premieres</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dorrance, Michelle</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Lovette, Lauren</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Schreier, Claudia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Tanowitz, Pam</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">we seem to be more than one (Dance)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">For Patricia (Dance)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Entr'acte (Dance)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Shaw, Caroline</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Angels of the Get-Through (Dance)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Tranquil NIght, Bright and Infinite (Dance)</category>
+    </item>
+  </channel>
+</rss>
