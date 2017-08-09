@@ -25,6 +25,7 @@ cors_proxy.createServer({ //TODO ask Joe about this
 
 //this will change per news source
 const pageURL = 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml';
+const source_id = '001';
 
 function scrapePage() {
   return new Promise( (resolve, reject) => {
@@ -42,11 +43,10 @@ function scrapePage() {
 }
 
 function parseItems(resXML) {
-  return new Promise( (resolve, reject) => {
+  // return new Promise( (resolve, reject) => {
     const $ = cheerio.load(resXML, {
 					    	normalizeWhitespace: true,
 					    	xmlMode: true});
-    let source_id = "001"; //id for NYT
     let storyCollection = [];
     // let lastFBUpdate = //TODO - grab last update for this source, check before adding story
     // go through each item tag in xml/rss feed, and set properties for that story
@@ -54,6 +54,7 @@ function parseItems(resXML) {
     	let $article = $(article);
     	let storyObject = {};
       storyObject.date = $article.find('pubDate').text();
+      // TODO date check before adding story
       // if(storyObject.date > lastFBUpdate) {
 	      storyObject.source = source_id;
 	      storyObject.headline = $article.find("title").text();
@@ -68,12 +69,27 @@ function parseItems(resXML) {
 	      	storyObject.keywords.push( cleanedKeyword );
 	      });
 		    pushStoryToFB(storyObject);
-	      // storyCollection.push(storyObject); //TODO change to write to FB
-      // }  //for date check
     });
-    //TODO change to write to FB
-    resolve(resXML);
-  });
+    // resolve(resXML);
+  // });
+}
+
+function parseSourceInfo(resXML) {
+	// return new Promise( (resolve, reject) => {
+    const $ = cheerio.load(resXML, {
+					    	normalizeWhitespace: true,
+					    	xmlMode: true});
+    // go through each item tag in xml/rss feed, and set properties for that story
+    let sourceObj = {};
+    sourceObj.source_id = source_id; //id for NYT
+    sourceObj.homepageURL = $('channel > link').text();
+    sourceObj.logoURL = $('channel image url').text();
+    sourceObj.lastUpdated = $('channel > lastBuildDate').text();
+    sourceObj.feedURL = $('channel').find('atom\\:link').attr('href');
+    console.log('sourceObj', sourceObj);
+    postNewSource(sourceObj);
+  //   resolve(resXML);
+  // });
 }
 
 function pushStoryToFB(storyObject) {
@@ -86,12 +102,12 @@ function pushStoryToFB(storyObject) {
 
 function postNewSource(sourceObj) {
 		return new Promise( (resolve, reject) => {
-			request.post(`${FirebaseUrl}/sources.json`, sourceObj)
-			.then( (postSourceData) => {
-				console.log('new Source Posted to FB', postSourceData);
+			let stringySource = JSON.stringify(sourceObj);
+			request.post( `${firebaseURL}/sources.json` ).form( stringySource );
+				console.log('new Source Posted to FB', stringySource);
+				resolve(stringySource);
 			});
-		});
-	};
+	}
 
 // function checkSourceUpdate(source_id) {
 // 	return new Promise( (resolve, reject) => {
@@ -101,9 +117,10 @@ function postNewSource(sourceObj) {
 
 //scrape the page
 scrapePage()
-.then( (resHtml) => {
+.then( (resXML) => {
+  parseItems(resXML);
+  parseSourceInfo(resXML);
 	console.log('ITEMS SENT TO FIREBASE');
-  return parseItems(resHtml);
 })
 .catch( (err) => {
   console.log("error", err );
