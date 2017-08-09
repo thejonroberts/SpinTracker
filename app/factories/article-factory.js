@@ -16,5 +16,19 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		});
 	};
 
+	let getSourceInfo = (source_id) => {
+		return $q( (resolve, reject) => {
+			$http.get(`${FirebaseUrl}/sources.json?orderBy="id"&equalTo="${source_id}"`)
+			.then( (sourceInfo) => {
+				console.log('sourceInfo', sourceInfo);
+				resolve(sourceInfo);
+			})
+			.catch( (err) => {
+				console.log('err grabbing source from FB', err);
+				reject(err);
+			});
+		});
+	};
+
 	return { getAllArticles };
 });

@@ -62,8 +62,10 @@ function parseItems(resXML) {
 	      storyObject.imageURL = $article.find('media\\:content').attr('url');
 	      storyObject.byline = $article.find('dc\\:creator').text();
 	      storyObject.keywords = [];
+	      // for each keyword entry, strip special characters then add to array
 	      $article.find('category').toArray().forEach( (keyword) => {
-	      	storyObject.keywords.push( $(keyword).text() );
+	      	let cleanedKeyword = $(keyword).text().replace(/[^\w\s]/gi, '');
+	      	storyObject.keywords.push( cleanedKeyword );
 	      });
 		    pushStoryToFB(storyObject);
 	      // storyCollection.push(storyObject); //TODO change to write to FB
@@ -79,8 +81,17 @@ function pushStoryToFB(storyObject) {
 		let stringyStory = JSON.stringify(storyObject);
 		request.post( `${firebaseURL}/articles.json` ).form( stringyStory );
 		resolve(stringyStory);
-	})
+	});
 }
+
+function postNewSource(sourceObj) {
+		return new Promise( (resolve, reject) => {
+			request.post(`${FirebaseUrl}/sources.json`, sourceObj)
+			.then( (postSourceData) => {
+				console.log('new Source Posted to FB', postSourceData);
+			});
+		});
+	};
 
 // function checkSourceUpdate(source_id) {
 // 	return new Promise( (resolve, reject) => {
