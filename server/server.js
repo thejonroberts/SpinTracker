@@ -64,8 +64,8 @@ function parseItems(resXML) {
 	      storyObject.keywords = [];
 	      $article.find('category').toArray().forEach( (keyword) => {
 	      	storyObject.keywords.push( $(keyword).text() );
-		    pushStoryToFB(storyObject);
 	      });
+		    pushStoryToFB(storyObject);
 	      // storyCollection.push(storyObject); //TODO change to write to FB
       // }  //for date check
     });

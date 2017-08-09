@@ -7,6 +7,7 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		return $q( (resolve, reject) => {
 			$http.get(`${FirebaseUrl}articles.json`)
 			.then( (articleData) => {
+				console.log('articleData', articleData);
 				resolve(articleData.data);
 			})
 			.catch( (err) => {
