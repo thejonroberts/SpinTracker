@@ -25,27 +25,8 @@ cors_proxy.createServer({
   console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
 
-//this will change per news source
-let NewYorkTimes = {
-	name: "New York Times",
-	source_id: "001",
-	filename: "NYT",
-	bias: "center",
-	feedURL: 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml',
-	homepageURLSearch: "channel > link",
-	logoURLSearch: "channel image url",
-	lastUpdatedSearch: "channel > lastBuildDate",
-	headlineSearch: 'title',
-	linkSearch: "guid",
-  copySearch: "description",
-  imageURLSearch: "media\\:content",
-  bylineSearch: "dc\\:creator",
-  keywordSearch: "category",
-  dateSearch: "pubDate"
-};
-
-const source  = NewYorkTimes;
-// console.log('source', source);
+//this must be reassigned to scrape per source in sources.js file
+const source  = require('./sources.js').NationalReview;
 
 function scrapePage(feedURL) {
   return new Promise( (resolve, reject) => {
