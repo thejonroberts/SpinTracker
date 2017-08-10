@@ -7,3 +7,4 @@ app/values/
 app/values/fb-setting.js
 server/node_modules/
 server/.env
+server/data/
