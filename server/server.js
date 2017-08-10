@@ -26,10 +26,10 @@ cors_proxy.createServer({
 });
 
 //this must be reassigned to scrape per source in sources.js file
-// const source  = require('./sources.js').NewYorkTimes;
+const source  = require('./sources.js').NewYorkTimes;
 // const source  = require('./sources.js').NationalReview;
 // const source  = require('./sources.js').MSNBC;
-const source  = require('./sources.js').NationalPublicRadio;
+// const source  = require('./sources.js').NationalPublicRadio;
 
 function scrapePage(feedURL) {
   return new Promise( (resolve, reject) => {
@@ -38,13 +38,13 @@ function scrapePage(feedURL) {
       if (error) { console.log("error", error); reject(); };
       //write the entire scraped page to the local file system
       fs.writeFile(__dirname + `/data/${source.filename}.xml`, responseXml, (err) => {
-          if (err) {
-          	console.log("error in write file", err);
-          } else {
-	          console.log(`entire feed successfully written to data/${source.filename}`);
-          }
+        if (err) {
+        	console.log("error in write file", err);
+        } else {
+          console.log(`entire feed successfully written to data/${source.filename}`);
+        }
       });
-          resolve(responseXml);
+      resolve(responseXml);
     });
   });
 }

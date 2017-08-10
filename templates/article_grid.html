@@ -1,13 +1,26 @@
+<div ng-include="'templates/navbar_partial.html'"></div>
 
-<div class="row">
-	<div ng-repeat="article in articles" class="col-4 p-0">
-		<div class="card h-100">
-	    <div class="card-block">
-		    <img class="w-50" src="{{article.imageURL}}" alt="News Image">
-	      <h4 class="card-title">{{article.headline}}</h4>
-	      <p class="card-text">{{article.copy}}</p>
-		    <p><small class="text-muted">{{article.date}}</small></p>
+	<div id="accordion" role="tablist" aria-multiselectable="true">
+
+	  <div class="card" ng-repeat="article in articles" >
+
+	    <div class="card-header" role="tab" id="heading{{$index}}">
+	      <h5 class="mb-0">
+	        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
+	          {{article.headline}}
+	        </a>
+	      </h5>
 	    </div>
-    </div>
-	</div>
+
+	    <div id="collapse{{$index}}" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+	      <div class="card-block">
+		      <img class="w-50" src="{{article.imageURL}}" alt="News Image">
+	        <p>{{article.copy}}</p>
+	        <p><small class="text-muted">{{article.date}}</small></p>
+	      </div>
+	    </div>
+
+	  </div>
+  </div>
+
 </div>
