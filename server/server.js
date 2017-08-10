@@ -26,7 +26,10 @@ cors_proxy.createServer({
 });
 
 //this must be reassigned to scrape per source in sources.js file
-const source  = require('./sources.js').NationalReview;
+// const source  = require('./sources.js').NewYorkTimes;
+// const source  = require('./sources.js').NationalReview;
+// const source  = require('./sources.js').MSNBC;
+const source  = require('./sources.js').NationalPublicRadio;
 
 function scrapePage(feedURL) {
   return new Promise( (resolve, reject) => {
