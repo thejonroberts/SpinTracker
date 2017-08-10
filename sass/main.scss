@@ -4,3 +4,20 @@
 body {
 	background-color: grey;
 }
+
+#bodyWrapper {
+	height: 100vh;
+}
+
+#AngularWrapper {
+	height: 100%;
+}
+
+#subNavbar {
+	height: 100%;
+}
+
+#articlesWrapper {
+	height: 100%;
+	overflow: scroll;
+}
