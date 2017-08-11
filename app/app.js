@@ -8,6 +8,11 @@ SpinTracker.config( ($routeProvider) => {
     .when('/', {
         templateUrl: 'templates/article_grid.html',
         controller: 'ArticleGridViewController'
+        resolve: {isAuth}
     })
-    .otherwise('/');
+    .when('/login', {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginController'
+    })
+    .otherwise('/login');
 });

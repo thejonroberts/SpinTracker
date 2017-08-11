@@ -1,6 +1,13 @@
 'use strict';
 
-SpinTracker.controller("LoginController", function($q, $http, FirebaseUrl) {
+SpinTracker.controller("LoginController", function($q, $http, $scope, FirebaseUrl) {
 
-	return {};
+	$scope.login = () => {
+        UserFactory.loginUser()
+        .then( (data) => {
+            let currentUser = data.user.uid;
+            $window.location.href = '#!/board/all';
+        });
+    };
+
 });
