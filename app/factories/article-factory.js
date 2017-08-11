@@ -7,10 +7,24 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		return $q( (resolve, reject) => {
 			$http.get(`${FirebaseUrl}articles.json`)
 			.then( (articleData) => {
-				console.log('articleData', articleData);
+				// console.log('articleData', articleData);
 				resolve(articleData.data);
 			})
 			.catch( (err) => {
+				reject(err);
+			});
+		});
+	};
+
+	let getAllSources = () => {
+		return $q( (resolve, reject) => {
+			$http.get(`${FirebaseUrl}/sources.json`)
+			.then( (sourceInfo) => {
+				// console.log('sourceInfo', sourceInfo);
+				resolve(sourceInfo.data);
+			})
+			.catch( (err) => {
+				console.log('err grabbing source from FB', err);
 				reject(err);
 			});
 		});
@@ -20,8 +34,8 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		return $q( (resolve, reject) => {
 			$http.get(`${FirebaseUrl}/sources.json?orderBy="id"&equalTo="${source_id}"`)
 			.then( (sourceInfo) => {
-				console.log('sourceInfo', sourceInfo);
-				resolve(sourceInfo);
+				// console.log('sourceInfo', sourceInfo);
+				resolve(sourceInfo.data);
 			})
 			.catch( (err) => {
 				console.log('err grabbing source from FB', err);
@@ -30,5 +44,5 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		});
 	};
 
-	return { getAllArticles };
+	return { getAllArticles, getAllSources };
 });
