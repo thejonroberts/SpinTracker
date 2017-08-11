@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('hello News');
-
 let SpinTracker = angular.module("SpinTracker", ["ngRoute"])
 .constant('FirebaseUrl', 'https://spintrack-faa88.firebaseio.com/');
 

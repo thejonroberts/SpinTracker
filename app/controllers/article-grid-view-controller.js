@@ -42,9 +42,9 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	  });
 	});
 
-  function biasCheck(sourceBias) {
-  	console.log('$scope.search.biasFilter.sourceBias', $scope.search.biasFilter.sourceBias);
-  	return $scope.search.biasFilter.sourceBias;
-  }
+  $scope.biasCheck = (article) => {
+  	//check current state of corresponding filter checkbox
+  	return $scope.filter.biasFilter[article.bias];
+  };
 
 });
