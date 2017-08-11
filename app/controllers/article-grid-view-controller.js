@@ -6,6 +6,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	//import search entry from FilterFactory
 	$scope.filter = FilterFactory;
 
+	//get all FB articles
 	ArticleFactory.getAllArticles()
   .then( (articleData)  => {
 		let articleArr = [];
@@ -36,6 +37,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	  			}
 	  		});
 	  	});
+	  	$scope.filter.sources = sourceArr;
 	  })
 	  .catch( (err) => {
 	    console.log('error?', err);

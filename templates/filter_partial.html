@@ -64,4 +64,14 @@
 		    </select>
 		  </div>
 		</div>
+		<div class="form-group">
+			<label>My Sources</label>
+			<div class="form-check" ng-repeat="source in filter.sources">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input">
+		      <!-- ng-model -->
+		      {{source.name}}
+		    </label>
+		  </div>
+	  </div>
 	</form>

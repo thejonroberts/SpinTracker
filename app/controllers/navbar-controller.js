@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("NavbarController", function($scope, $q, $http, $window, FirebaseUrl, UserFactory, FilterFactory) {
+SpinTracker.controller("NavbarController", function($scope, $q, $http, $window, FirebaseUrl, UserFactory, FilterFactory, ArticleFactory) {
 
 	$scope.search = FilterFactory;
 
