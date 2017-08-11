@@ -11,35 +11,5 @@ SpinTracker.config( ($routeProvider) => {
         templateUrl: 'templates/article_grid.html',
         controller: 'ArticleGridViewController'
     })
-    // .when('/board/all', {
-    //     templateUrl: 'templates/boards-all.html',
-    //     controller: 'AllBoardsController',
-    //     // resolve: {isAuth}
-    // // })
-    // .when('/board/:board_id', {
-    //     templateUrl : 'templates/single-board.html',
-    //     controller: 'SingleBoardController',
-    //     resolve: {isAuth}
-    // })
-    // .when('/pin/add', {
-    //     templateUrl: 'templates/pin-form.html',
-    //     controller: 'AddPinController',
-    //     resolve: {isAuth}
-    // })
-    // .when('/pin/add/:board_id', {
-    //     templateUrl: 'templates/pin-form.html',
-    //     controller: 'AddPinController',
-    //     resolve: {isAuth}
-    // })
-    // .when('/pin/view/:pin_id', {
-    //     templateUrl: 'templates/single-pin.html',
-    //     controller: 'SinglePinController',
-    //     resolve: {isAuth}
-    // })
-    // .when('/pin/edit/:pin_id', {
-    //     templateUrl: 'templates/pin-form.html',
-    //     controller: 'EditPinController',
-    //     resolve: {isAuth}
-    // })
     .otherwise('/');
 });
