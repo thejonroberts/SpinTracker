@@ -1,0 +1,67 @@
+	<form id="filterForm" class="flex-column p-2">
+	<legend>Filters:</legend>
+		<!-- sources filter -->
+		<div class="form-group">
+			<label>Sources</label>
+	    <div class="form-check">
+	      <label class="form-check-label">
+	        <input type="radio" class="form-check-input" name="allSourcesRadio" id="allSourcesRadio" value="allSources" checked>
+	        All Sources
+	      </label>
+	    </div>
+	    <div class="form-check">
+		    <label class="form-check-label">
+	        <input type="radio" class="form-check-input" name="mySourcesRadio" id="mySourcesRadio" value="userSources">
+	        My Sources
+	      </label>
+	    </div>
+		</div>
+		<!-- bias radios -->
+		<div class="form-group">
+			<label>Bias</label>
+			<div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input" checked>
+		      Far Left
+		    </label>
+		  </div>
+		  <div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input" checked>
+		      Left
+		    </label>
+		  </div>
+		  <div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input" checked>
+		      Center
+		    </label>
+		  </div>
+		  <div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input" checked>
+		      Right
+		    </label>
+		  </div>
+		  <div class="form-check">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input" checked>
+		      Far Right
+		    </label>
+		  </div>
+		</div>
+		<!-- date -->
+		<div class="form-group">
+			<div class="form-group">
+		    <label for="exampleSelect1">Within the past:</label>
+		    <select class="form-control" id="exampleSelect1">
+		      <option disabled selected>range</option>
+		      <option>day</option>
+		      <option>week</option>
+		      <option>month</option>
+		      <option>year</option>
+		      <option>like, forever</option>
+		    </select>
+		  </div>
+		</div>
+	</form>

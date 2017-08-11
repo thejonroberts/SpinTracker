@@ -9,10 +9,12 @@
 	</head>
 
 	<body ng-app="SpinTracker">
-
-		<div id="pageWrapper" ng-view></div>
+		<div id="bodyWrapper" class="container-fluid">
+			<div id="AngularWrapper" ng-view></div>
+		</div>
 
 		<!-- dependencies -->
+	  <script type="text/javascript" src="./lib/node_modules/moment/moment.js"></script>
 	  <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
 	  <script type="text/javascript" src="./lib/node_modules/tether/dist/js/tether.min.js"></script>
 	  <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -23,8 +25,13 @@
 	  <script type="text/javascript" src="./app/app.js"></script>
 	  <!-- providers -->
 	  <script type="text/javascript" src="./app/values/fbCreds.js"></script>
-
+	  <script type="text/javascript" src="./app/factories/user-factory.js"></script>
+	  <script type="text/javascript" src="./app/factories/article-factory.js"></script>
+	  <script type="text/javascript" src="./app/factories/filter-factory.js"></script>
 	  <!-- controllers -->
+	  <script type="text/javascript" src="./app/controllers/article-grid-view-controller.js"></script>
+	  <script type="text/javascript" src="./app/controllers/login-controller.js"></script>
+	  <script type="text/javascript" src="./app/controllers/navbar-controller.js"></script>
 
 	</body>
 </html>
