@@ -3,6 +3,7 @@
 SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory ) {
 
 	$scope.articles = null;
+	//import search entry from FilterFactory
 	$scope.search = FilterFactory;
 
 	ArticleFactory.getAllArticles()
@@ -28,7 +29,6 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   		// console.log('checking for source info', article);
   		sourceArr.forEach ( (source) => {
   			if (article.source === source.source_id) {
-  				console.log('match', source.name);
   				article.bias = source.bias;
   				article.logoURL = source.logoURL;
   				article.sourceName = source.name;

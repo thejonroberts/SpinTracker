@@ -7,7 +7,7 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		return $q( (resolve, reject) => {
 			$http.get(`${FirebaseUrl}articles.json`)
 			.then( (articleData) => {
-				console.log('articleData', articleData);
+				// console.log('articleData', articleData);
 				resolve(articleData.data);
 			})
 			.catch( (err) => {
@@ -20,7 +20,7 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		return $q( (resolve, reject) => {
 			$http.get(`${FirebaseUrl}/sources.json`)
 			.then( (sourceInfo) => {
-				console.log('sourceInfo', sourceInfo);
+				// console.log('sourceInfo', sourceInfo);
 				resolve(sourceInfo.data);
 			})
 			.catch( (err) => {
@@ -34,7 +34,7 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 		return $q( (resolve, reject) => {
 			$http.get(`${FirebaseUrl}/sources.json?orderBy="id"&equalTo="${source_id}"`)
 			.then( (sourceInfo) => {
-				console.log('sourceInfo', sourceInfo);
+				// console.log('sourceInfo', sourceInfo);
 				resolve(sourceInfo.data);
 			})
 			.catch( (err) => {

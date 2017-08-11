@@ -1,7 +1,7 @@
 'use strict';
 
 SpinTracker.factory("FilterFactory", function($q, $http, FirebaseUrl) {
-  return {
-    searchTerm: ""
-  };
+	//navbar search term stored here
+  return { searchTerm: "" };
+
 });
