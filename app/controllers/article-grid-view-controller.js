@@ -1,6 +1,9 @@
 'use strict';
 
-SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory ) {
+SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory ) {
+
+	$scope.articles = null;
+	$scope.search = FilterFactory;
 
 	ArticleFactory.getAllArticles()
   .then( (articleData)  => {
@@ -11,6 +14,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	});
 	//assign all articles to scope.articles
 	$scope.articles = articleArr;
+
 	//get all sources
 	ArticleFactory.getAllSources()
   .then( (sourceData) => {
