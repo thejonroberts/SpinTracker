@@ -4,7 +4,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 
 	$scope.articles = null;
 	//import search entry from FilterFactory
-	$scope.search = FilterFactory;
+	$scope.filter = FilterFactory;
 
 	ArticleFactory.getAllArticles()
   .then( (articleData)  => {
