@@ -4,4 +4,8 @@ SpinTracker.controller("NavbarController", function($scope, $q, $http, FirebaseU
 
 	$scope.search = FilterFactory;
 
+	$scope.clearSearch = () => {
+		$scope.search.searchTerm = "";
+	};
+
 });

@@ -3,12 +3,12 @@
 
 <div class="row" id="subNavbar">
 
-	<div class="col-sm-3 bg-faded sidebar" ng-include="'templates/filter_partial.html'"></div>
-	<div id="articlesWrapper" class="col-sm-9">
+	<div class="col-sm-2 bg-faded sidebar" ng-include="'templates/filter_partial.html'"></div>
+	<div id="articlesWrapper" class="col-sm-10">
 
 		<div id="accordion" role="tablist" aria-multiselectable="true">
 
-		  <div class="card" ng-repeat="article in articles | filter: {headline: search.searchTerm}">
+		  <div class="card" ng-repeat="article in articles | filter: {headline: filter.searchTerm} | filter: biasCheck | orderBy: 'date'">
 
 		    <div class="card-header" role="tab" id="heading{{$index}}">
 			    <img class="w-20 rounded float-right" src="{{article.logoURL}}" alt="{{article.sourceName}} logo">
@@ -23,7 +23,8 @@
 		      <div class="card-block">
 			      <img class="w-25 rounded float-right" src="{{article.imageURL}}" alt="News Image">
 		        <p>{{article.copy}}</p>
-		        <p><small class="text-muted">{{article.date}}</small></p>
+		        <p><a href="{{article.link}}" target="_blank" rel="noopener noreferrer">Full Article</a></p>
+		        <p><small class="text-muted">{{article.sourceName}} - {{article.date}}</small></p>
 		      </div>
 		    </div>
 

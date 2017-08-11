@@ -4,8 +4,10 @@
     <a class="nav-item nav-link" href="#">Logout</a>
     <!-- <a class="nav-item nav-link" href="#">Filter</a> -->
     <form class="form-inline mt-2 mt-md-0" _lpchecked="1">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" ng-model="search.searchTerm">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    	<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+          <input class="form-control" type="text" placeholder="Search" ng-model="search.searchTerm">
+          <button class="input-group-addon btn btn-outline-success" ng-click="clearSearch()">X</button>
+    	</div>
     </form>
   </div>
 </nav>
