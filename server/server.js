@@ -28,10 +28,13 @@ cors_proxy.createServer({
 });
 
 //this must be reassigned to scrape per source in sources.js file
-// const source  = require('./sources.js').NewYorkTimes;
+const source  = require('./sources.js').NewYorkTimes;
 // const source  = require('./sources.js').NationalReview;
 // const source  = require('./sources.js').MSNBC;
-const source  = require('./sources.js').NationalPublicRadio;
+// const source  = require('./sources.js').NationalPublicRadio;
+
+let momentDate = moment("Thu, 10 Aug 2017 16:24:43 GMT ").format("ddd MMM Do YY");
+console.log('momentDate', momentDate);
 
 function scrapePage(feedURL) {
   return new Promise( (resolve, reject) => {
@@ -61,7 +64,8 @@ function parseArticles(resXML) {
   $("item").toArray().forEach( (article, index) => {
   	// let $article = $(article);
   	let storyObject = {};
-	    storyObject.date = $(article).find(source.dateSearch).text();
+	  	let sourceDate = $(article).find(source.dateSearch).text();
+	    storyObject.date = moment(sourceDate).format("ddd MMM Do YYYY");
     // TODO date check before adding story
       storyObject.source = source.source_id;
       storyObject.headline = $(article).find(source.headlineSearch).text();
@@ -124,7 +128,7 @@ function postNewSource(sourceObj) {
 scrapePage(source.feedURL)
 .then( (resXML) => {
   parseArticles(resXML);
-  parseSourceInfo(resXML);
+  // parseSourceInfo(resXML);
 	console.log('ITEMS SENT TO FIREBASE');
 })
 .catch( (err) => {

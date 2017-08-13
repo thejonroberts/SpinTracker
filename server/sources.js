@@ -17,7 +17,8 @@ exports.NewYorkTimes = {
   imageURLSearch: "media\\:content",
   bylineSearch: "dc\\:creator",
   keywordSearch: "category",
-  dateSearch: "pubDate"
+  dateSearch: "pubDate",
+  dateFormat: "ddd, DD MMM YYYY HH:mm:ss GMT"
 };
 
 exports.NationalReview = {
