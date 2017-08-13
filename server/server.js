@@ -5,7 +5,6 @@ const fs = require('fs');
 const request = require('request');
 const cheerio = require('cheerio');
 var moment = require('moment');
-// moment().format();
 
 const host = process.env.PORT ? '0.0.0.0' : '127.0.0.1'; //ask Joe about this
 const port = process.env.PORT || 8080;
@@ -54,20 +53,21 @@ function scrapePage(feedURL) {
   });
 }
 
-function parseArticles(resXML) {
+function parseArticles(resXML, sourceObj) {
   const $ = cheerio.load(resXML, {
 				    	normalizeWhitespace: true,
 				    	xmlMode: true});
   let storyCollection = [];
+  let sourcedate =
   // let lastFBUpdate = //TODO - grab last update for this source, check before adding story
   // go through each item tag in xml/rss feed, and set properties for that story
   $("item").toArray().forEach( (article, index) => {
   	// let $article = $(article);
   	let storyObject = {};
+      storyObject.source = source.source_id;
 	  	let sourceDate = $(article).find(source.dateSearch).text();
 	    storyObject.date = moment(sourceDate).format("ddd MMM Do YYYY");
     // TODO date check before adding story
-      storyObject.source = source.source_id;
       storyObject.headline = $(article).find(source.headlineSearch).text();
       storyObject.link = $(article).find(source.linkSearch).text();
       storyObject.copy = $(article).find(source.copySearch).text();
@@ -90,16 +90,20 @@ function parseSourceInfo(resXML) {
 				    	xmlMode: true});
   // go through each item tag in xml/rss feed, and set properties for that story
   let sourceObj = {};
-  sourceObj.name = source.name //NAME
+  let feedUpdate = $(source.lastUpdatedSearch).text();
+  sourceObj.lastUpdated = moment.utc(feedUpdate);
   sourceObj.source_id = source.source_id; //id for NYT
+  sourceObj.name = source.name //NAME
   sourceObj.homepageURL = $(source.homepageURLSearch).text();
   sourceObj.logoURL = $(source.logoURLSearch).text();
-  sourceObj.lastUpdated = $(source.lastUpdatedSearch).text();
   sourceObj.feedURL = source.feedURL;
   sourceObj.bias = source.bias;
   // console.log('sourceObj', sourceObj);
   postNewSource(sourceObj);
 }
+
+  // patchNewSource(sourceObj);
+
 
 function pushStoryToFB(storyObject) {
 	return new Promise( (resolve, reject) => {
@@ -118,6 +122,15 @@ function postNewSource(sourceObj) {
 		});
 }
 
+function getSourceInfo() {
+	return new Promise( (resolve, reject) => {
+		request.get( `${firebaseURL}/sources.json?orderBy="source_id"&equalTo="${source.source_id}"`, (error, response, responseData) => {
+			console.log('grabbed Source from FB', responseData);
+			resolve(responseData.data);
+			});
+		});
+}
+
 // function checkSourceUpdate(source_id) {
 // 	return new Promise( (resolve, reject) => {
 	// TODO
@@ -127,9 +140,16 @@ function postNewSource(sourceObj) {
 //scrape the page
 scrapePage(source.feedURL)
 .then( (resXML) => {
-  parseArticles(resXML);
-  // parseSourceInfo(resXML);
-	console.log('ITEMS SENT TO FIREBASE');
+	// getSourceInfo()
+	// .then( (sourceObj) => {
+	// 	console.log('sourceObj', sourceObj);
+	  parseArticles(resXML);
+	  parseSourceInfo(resXML);
+		console.log('ITEMS SENT TO FIREBASE');
+	// })
+	// .catch( (err) => {
+	// 	console.log('error grabbing source info from FB', err);
+	// });
 })
 .catch( (err) => {
   console.log("error", err );
