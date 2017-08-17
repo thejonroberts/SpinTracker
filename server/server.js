@@ -27,13 +27,13 @@ cors_proxy.createServer({
 });
 
 //this must be reassigned to scrape per source in sources.js file
-const source  = require('./sources.js').NewYorkTimes;
+// const source  = require('./sources.js').NewYorkTimes;
 // const source  = require('./sources.js').NationalReview;
 // const source  = require('./sources.js').MSNBC;
 // const source  = require('./sources.js').NationalPublicRadio;
 
-let momentDate = moment("Thu, 10 Aug 2017 16:24:43 GMT ").format("ddd MMM Do YY");
-console.log('momentDate', momentDate);
+// let momentDate = moment("Thu, 10 Aug 2017 16:24:43 GMT ").format("ddd MMM Do YY");
+// console.log('momentDate', momentDate);
 
 function scrapePage(feedURL) {
   return new Promise( (resolve, reject) => {
@@ -66,7 +66,6 @@ function parseArticles(resXML, sourceObj) {
 	  	let articleDate = $(article).find(source.dateSearch).text();
 	    // TODO date check before adding story
 	  	if ( moment.utc(articleDate).isAfter(FBSourceObj.lastUpdated) ) {
-	  		console.log('yup');
 		  	let storyObject = {};
 	      storyObject.source = source.source_id;
 		    storyObject.date = articleDate;
@@ -81,16 +80,12 @@ function parseArticles(resXML, sourceObj) {
 	      	let cleanedKeyword = $(keyword).text().replace(/[^\w\s]/gi, '');
 	      	storyObject.keywords.push( cleanedKeyword );
 	      });
-	      // console.log('storyObject', storyObject);
 		    pushStoryToFB(storyObject);
 	  	}
 	  });
 	  let feedUpdate = $(source.lastUpdatedSearch).text();
-	  console.log('feedUpdate', feedUpdate);
 	  let utcFeedUpdate = moment.utc(feedUpdate);
-	  console.log('utcFeedUpdate', utcFeedUpdate);
   	FBSourceObj.lastUpdated = utcFeedUpdate;
-  	console.log('FBSourceObj', FBSourceObj);
 	  patchSourceInfo(FBSourceObj);
   });
 }
@@ -124,7 +119,7 @@ function patchSourceInfo(sourceObj) {
 			function(error, response, body) {
 				if (error) {console.log('error', error);}
 				else {
-					// console.log('response', response);
+					console.log('patched source', response.body);
 				}
 			});
 		resolve(stringySource);
@@ -156,13 +151,9 @@ function getSourceInfo() {
 				reject();
 			}
 			else {
-				// console.log('grabbed Source from FB', responseData);
 				let parsedResponse = JSON.parse(responseData);
 				let key = Object.keys(parsedResponse)[0];
 				parsedResponse[key].key = key;
-				console.log('parsedResponse[key]', parsedResponse[key]);
-				// console.log('Object.key(parsedResponse)', key);
-				// console.log('parsedResponse', parsedResponse);
 				resolve(parsedResponse[key]);
 			}
 			});

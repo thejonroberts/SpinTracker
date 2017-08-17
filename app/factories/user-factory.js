@@ -11,6 +11,7 @@ var config = {
 	var provider = new firebase.auth.GoogleAuthProvider();
 
 	let currentUser = null;
+	// let userPreferences = {};
 
 	let isAuthenticated = () => {
 		return $q( (resolve, reject) => {
@@ -46,6 +47,18 @@ var config = {
 		// console.log("currentUser", currentUser);
 		return currentUser;
 	};
+
+	let getUserInfo = () => {
+    return $q(resolve, reject) => {
+      $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
+      .then( (userData) => {
+        resolve(userData);
+      })
+      .catch( (err) => {
+        console.log("error getting user info", err);
+        reject(err);
+    }
+  };
 
 	let logoutUser = () => {
 		return firebase.auth().signOut()
