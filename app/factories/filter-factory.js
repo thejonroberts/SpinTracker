@@ -10,7 +10,7 @@ SpinTracker.factory("FilterFactory", function($q, $http, FirebaseUrl) {
 		farRight: true
 	};
 
-	let sources = [];
+	let sources = {};
 
 	let searchTerm = "";
 

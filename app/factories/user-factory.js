@@ -12,10 +12,10 @@ var config = {
 
 	let currentUser = null;
 	// let userPreferences = FilterFactory.userSourceArr;
-	// let userObject = {
-	// 	uid: currentUser,
-	// 	userSources: userPreferences
-	// };
+	let userObject = {
+		uid: currentUser,
+		// userSources: userPreferences
+	};
 
 	let isAuthenticated = () => {
 		return $q( (resolve, reject) => {
@@ -56,7 +56,7 @@ var config = {
     return $q( (resolve, reject) => {
       $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
       .then( (userData) => {
-      	let userKey = Obj;
+      	// let userKey = Obj;
       	console.log('userData', userData);
         resolve(userData);
       })
@@ -106,6 +106,6 @@ var config = {
 		});
 	};
 
-	return {loginUser, isAuthenticated, getUser, logoutUser};
+	return {loginUser, isAuthenticated, getUser, logoutUser, getUserInfo, createUserInfo};
 
 });

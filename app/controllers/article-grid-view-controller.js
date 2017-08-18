@@ -25,6 +25,9 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	  	//assign firebase identifiers to key property, push to sourceArr
 			Object.keys(sourceData).forEach( (key) => {
 				sourceData[key].id= key;
+
+				// sourceData[key].userDisplay = $scope.filter[]
+
 				sourceArr.push(sourceData[key]);
 			});
 	  	//add relevant source info to each article for dispaly and filtering
@@ -48,6 +51,19 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	//check current state of corresponding filter checkbox
   	return $scope.filter.biasFilter[article.bias];
   };
+
+  let userSources = [];
+
+  // let getUserPreferences = () => {
+  // UserFactory
+  	UserFactory.getUserInfo()
+  	.then( (userData) => {
+  		console.log('userData', userData);
+  	})
+  	.catch( (err) => {
+  		console.log('error getting FB user info', err);
+  	});
+  // };
 
 
 
