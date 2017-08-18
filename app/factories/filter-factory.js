@@ -14,7 +14,7 @@ SpinTracker.factory("FilterFactory", function($q, $http, FirebaseUrl) {
 
 	let searchTerm = "";
 
-	let userPreferences = {};
+	let userSourceArr = [];
 
   return { searchTerm, biasFilter, sources };
 

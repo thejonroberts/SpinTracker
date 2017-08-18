@@ -5,6 +5,7 @@ SpinTracker.controller("LoginController", function($q, $http, $scope, $window, F
 	$scope.login = () => {
         UserFactory.loginUser()
         .then( (data) => {
+        	console.log('data', data);
             let currentUser = data.user.uid;
             $window.location.href = '#!/news';
         });

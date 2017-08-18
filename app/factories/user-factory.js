@@ -11,7 +11,11 @@ var config = {
 	var provider = new firebase.auth.GoogleAuthProvider();
 
 	let currentUser = null;
-	// let userPreferences = {};
+	// let userPreferences = FilterFactory.userSourceArr;
+	// let userObject = {
+	// 	uid: currentUser,
+	// 	userSources: userPreferences
+	// };
 
 	let isAuthenticated = () => {
 		return $q( (resolve, reject) => {
@@ -32,15 +36,15 @@ var config = {
 		return $q( (resolve, reject) => {
 			firebase.auth().signInWithPopup( provider)
 			.then( (data) => {
-			currentUser = data.user.uid;
-			// console.log("currentUser", currentUser);
-			resolve(data);
+				currentUser = data.user.uid;
+				// console.log("currentUser", currentUser);
+				resolve(data);
 		  })
 		  .catch( (err) => {
-			console.log("error loggin in", err.message);
+				console.log("error loggin in", err.message);
 		  });
 		});
-	  };
+  };
 	// console.log("currentUser", currentUser);
 
 	let getUser = () => {
@@ -49,16 +53,51 @@ var config = {
 	};
 
 	let getUserInfo = () => {
-    return $q(resolve, reject) => {
+    return $q( (resolve, reject) => {
       $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
       .then( (userData) => {
+      	let userKey = Obj;
+      	console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
         console.log("error getting user info", err);
         reject(err);
-    }
-  };
+	  	});
+	  });
+	};
+
+  let createUserInfo = (userObject) => {
+  	return $q( (resolve, reject) => {
+  		let JsonUserObject = angular.toJson(userObject);
+  		$http.post(`${FirebaseUrl}user.json`, JsonUserObject)
+      .then( (userData) => {
+      	console.log('userData', userData);
+        resolve(userData);
+      })
+      .catch( (err) => {
+        console.log("error getting user info", err);
+        reject(err);
+	  	});
+	  });
+	};
+
+  let updateUserInfo = (userObject) => {
+  	return $q( (resolve, reject) => {
+  		let userKey = userObject.id;
+  		delete userObject.id;
+  		let JsonUserObject = angular.toJson(userObject);
+  		$http.patch(`${FirebaseUrl}user/${userKey}`, JsonUserObject)
+      .then( (userData) => {
+      	console.log('userData', userData);
+        resolve(userData);
+      })
+      .catch( (err) => {
+        console.log("error getting user info", err);
+        reject(err);
+	  	});
+	  });
+	};
 
 	let logoutUser = () => {
 		return firebase.auth().signOut()

@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory ) {
+SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory, UserFactory ) {
 
 	$scope.articles = null;
 	//import search entry from FilterFactory
@@ -48,5 +48,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	//check current state of corresponding filter checkbox
   	return $scope.filter.biasFilter[article.bias];
   };
+
+
 
 });
