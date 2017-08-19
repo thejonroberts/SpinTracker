@@ -3,11 +3,29 @@
 let SpinTracker = angular.module("SpinTracker", ["ngRoute"])
 .constant('FirebaseUrl', 'https://spintrack-faa88.firebaseio.com/');
 
+let isAuth = (UserFactory)  => {
+  return new Promise( (resolve, reject) => {
+      UserFactory.isAuthenticated()
+      .then( (userExistence) => {
+          if (userExistence) {
+              resolve();
+          } else {
+              reject();
+          }
+      });
+  });
+};
+
 SpinTracker.config( ($routeProvider) => {
     $routeProvider
-    .when('/', {
+    .when('/news', {
         templateUrl: 'templates/article_grid.html',
-        controller: 'ArticleGridViewController'
+        controller: 'ArticleGridViewController',
+        resolve: {isAuth}
+    })
+    .when('/', {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginController'
     })
     .otherwise('/');
 });

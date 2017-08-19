@@ -5,13 +5,13 @@
 			<label>Sources</label>
 	    <div class="form-check">
 	      <label class="form-check-label">
-	        <input type="radio" class="form-check-input" name="allSourcesRadio" id="allSourcesRadio" value="allSources" checked>
+	        <input type="radio" class="form-check-input" name="SourcesRadio" id="allSourcesRadio" ng-model="filter.allSources" ng-value="true" checked="checked">
 	        All Sources
 	      </label>
 	    </div>
 	    <div class="form-check">
 		    <label class="form-check-label">
-	        <input type="radio" class="form-check-input" name="mySourcesRadio" id="mySourcesRadio" value="userSources">
+	        <input type="radio" class="form-check-input" name="SourcesRadio" id="mySourcesRadio" ng-model="filter.allSources" ng-value="false">
 	        My Sources
 	      </label>
 	    </div>
@@ -64,4 +64,15 @@
 		    </select>
 		  </div>
 		</div>
+		<!-- SOURCES - USER -->
+		<div class="form-group">
+			<label>My Sources</label>
+			<div class="form-check" ng-repeat="source in filter.sources">
+		    <label class="form-check-label">
+		      <input type="checkbox" class="form-check-input" ng-model="filter.userSourceArr[source.index]" checked>
+		      {{source.name}}
+		    </label>
+		  </div>
+		  <button ng-click="saveSources()">Save Sources</button>
+	  </div>
 	</form>

@@ -1,11 +1,12 @@
 'use strict';
 
-SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory ) {
+SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory, UserFactory ) {
 
 	$scope.articles = null;
 	//import search entry from FilterFactory
 	$scope.filter = FilterFactory;
 
+	//get all FB articles
 	ArticleFactory.getAllArticles()
   .then( (articleData)  => {
 		let articleArr = [];
@@ -24,6 +25,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	  	//assign firebase identifiers to key property, push to sourceArr
 			Object.keys(sourceData).forEach( (key) => {
 				sourceData[key].id= key;
+				sourceData[key].index = parseInt(sourceData[key].source_id);
 				sourceArr.push(sourceData[key]);
 			});
 	  	//add relevant source info to each article for dispaly and filtering
@@ -36,6 +38,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	  			}
 	  		});
 	  	});
+	  	$scope.filter.sources = sourceArr;
 	  })
 	  .catch( (err) => {
 	    console.log('error?', err);
@@ -46,5 +49,29 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	//check current state of corresponding filter checkbox
   	return $scope.filter.biasFilter[article.bias];
   };
+
+  $scope.userSourceCheck = (article) => {
+  	if ($scope.filter.allSources) {
+  		return true;
+  	} else {
+  	//check current state of corresponding filter checkbox
+  	let sourceInt = parseInt(article.source);
+  	return $scope.filter.userSourceArr[sourceInt];
+  	}
+  };
+
+  $scope.saveSources = () => {
+		UserFactory.updateUserInfo($scope.filter.userSourceArr);
+	};
+
+	UserFactory.getUserInfo()
+	.then( (userData) => {
+		console.log('userData', userData);
+	})
+	.catch( (err) => {
+		console.log('error getting FB user info', err);
+	});
+
+
 
 });

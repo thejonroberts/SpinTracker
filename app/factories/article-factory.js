@@ -32,7 +32,7 @@ SpinTracker.factory("ArticleFactory", function($q, $http, FirebaseUrl) {
 
 	let getSourceInfo = (source_id) => {
 		return $q( (resolve, reject) => {
-			$http.get(`${FirebaseUrl}/sources.json?orderBy="id"&equalTo="${source_id}"`)
+			$http.get(`${FirebaseUrl}/sources.json?orderBy="source_id"&equalTo="${source_id}"`)
 			.then( (sourceInfo) => {
 				// console.log('sourceInfo', sourceInfo);
 				resolve(sourceInfo.data);

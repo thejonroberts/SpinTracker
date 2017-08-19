@@ -1,5 +1,5 @@
 
-<div ng-include="'templates/navbar_partial.html'"></div>
+<div ng-include="'templates/navbar_partial.html'" id="navbar"></div>
 
 <div class="row" id="subNavbar">
 
@@ -8,7 +8,7 @@
 
 		<div id="accordion" role="tablist" aria-multiselectable="true">
 
-		  <div class="card" ng-repeat="article in articles | filter: {headline: filter.searchTerm} | filter: biasCheck | orderBy: 'date'">
+		  <div class="card" ng-repeat="article in articles | filter: {headline: filter.searchTerm} | filter: userSourceCheck | filter: biasCheck | orderBy: 'date'">
 
 		    <div class="card-header" role="tab" id="heading{{$index}}">
 			    <img class="w-20 rounded float-right" src="{{article.logoURL}}" alt="{{article.sourceName}} logo">
