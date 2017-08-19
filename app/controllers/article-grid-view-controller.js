@@ -53,6 +53,16 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	return $scope.filter.biasFilter[article.bias];
   };
 
+  $scope.userSourceCheck = (article) => {
+  	if ($scope.filter.allSources) {
+  		return true;
+  	} else {
+  	//check current state of corresponding filter checkbox
+  	let sourceInt = parseInt(article.source);
+  	return $scope.filter.userSourceArr[sourceInt];
+  	}
+  };
+
   $scope.saveSources = () => {
 		console.log('$scope.filter.userSourceArr', $scope.filter.userSourceArr);
 		UserFactory.updateUserInfo($scope.filter.userSourceArr);

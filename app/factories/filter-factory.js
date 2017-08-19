@@ -14,8 +14,14 @@ SpinTracker.factory("FilterFactory", function($q, $http, FirebaseUrl) {
 
 	let searchTerm = "";
 
+	let allSources = true;
+
 	let userSourceArr = [];
 
-  return { searchTerm, biasFilter, sources, userSourceArr };
+	// let userSourceCheck = (sourceString) => {
+	// 	return( userSourceArr[ (parseInt(sourceString)) ] );
+	// };
+
+  return { searchTerm, biasFilter, sources, userSourceArr, allSources };
 
 });
