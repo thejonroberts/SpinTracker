@@ -32,6 +32,7 @@ SpinTracker.controller("LoginController", function($q, $http, $scope, $window, F
     				}
 	      		UserFactory.createUserInfo(userObject)
 	      		.then( (data) => {
+	      			UserFactory.setUserKey(data.name);
 	      			// console.log('user created', data);
 	      			// once user is created, go to news list
 		          $window.location.href = '#!/news';
@@ -44,6 +45,7 @@ SpinTracker.controller("LoginController", function($q, $http, $scope, $window, F
     				console.log('err getting sources in user creation', err);
     			});
     		} else {
+    			UserFactory.setUserKey(key);
     			filter.userSourceArr = userFBData.data[key].userSources;
     			console.log('filter.userSourceArr', filter.userSourceArr);
           $window.location.href = '#!/news';

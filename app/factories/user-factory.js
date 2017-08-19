@@ -11,6 +11,7 @@ var config = {
 	var provider = new firebase.auth.GoogleAuthProvider();
 
 	let currentUser = null;
+	let userKey = null;
 	// let userPreferences = FilterFactory.userSourceArr;
 	// let userObject = {
 	// 	uid: currentUser,
@@ -51,6 +52,14 @@ var config = {
 		return currentUser;
 	};
 
+	let setUserKey = (FBkey) => {
+		userKey = FBkey;
+	};
+
+	let getUserKey = () => {
+		return userKey;
+	};
+
 	let getUserInfo = () => {
     return $q( (resolve, reject) => {
       $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
@@ -83,9 +92,13 @@ var config = {
 
   let updateUserInfo = (userSourceArr) => {
   	return $q( (resolve, reject) => {
-  		let userKey = getUser();
-  		let JsonUserSources = angular.toJson( {userSources: userSourceArr} );
-  		$http.patch(`${FirebaseUrl}user/${userKey}`, JsonUserSources)
+  		// let userID = getUser();
+  		let JsonUserSources = angular.toJson(
+  		 {userSources: userSourceArr
+  		 	// ,  			uid: `${userID}`
+  		 	} );
+  		let userKey = getUserKey();
+  		$http.patch(`${FirebaseUrl}user/${userKey}.json`, JsonUserSources)
       .then( (userData) => {
       	console.log('userData', userData);
         resolve(userData);
@@ -104,6 +117,6 @@ var config = {
 		});
 	};
 
-	return {loginUser, isAuthenticated, getUser, logoutUser, getUserInfo, createUserInfo};
+	return {loginUser, isAuthenticated, getUser, logoutUser, getUserInfo, createUserInfo, updateUserInfo, getUserKey, setUserKey};
 
 });

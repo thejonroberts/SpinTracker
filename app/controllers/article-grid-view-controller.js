@@ -53,7 +53,10 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	return $scope.filter.biasFilter[article.bias];
   };
 
-  let userSources = [];
+  $scope.saveSources = () => {
+		console.log('$scope.filter.userSourceArr', $scope.filter.userSourceArr);
+		UserFactory.updateUserInfo($scope.filter.userSourceArr);
+	};
 
   // let getUserPreferences = () => {
   // UserFactory
