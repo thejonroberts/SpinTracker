@@ -26,8 +26,6 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 			Object.keys(sourceData).forEach( (key) => {
 				sourceData[key].id= key;
 				sourceData[key].index = parseInt(sourceData[key].source_id);
-				// sourceData[key].userDisplay = $scope.filter[]
-
 				sourceArr.push(sourceData[key]);
 			});
 			console.log('sourceArr', sourceArr);
@@ -64,20 +62,16 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   };
 
   $scope.saveSources = () => {
-		console.log('$scope.filter.userSourceArr', $scope.filter.userSourceArr);
 		UserFactory.updateUserInfo($scope.filter.userSourceArr);
 	};
 
-  // let getUserPreferences = () => {
-  // UserFactory
-  	UserFactory.getUserInfo()
-  	.then( (userData) => {
-  		console.log('userData', userData);
-  	})
-  	.catch( (err) => {
-  		console.log('error getting FB user info', err);
-  	});
-  // };
+	UserFactory.getUserInfo()
+	.then( (userData) => {
+		console.log('userData', userData);
+	})
+	.catch( (err) => {
+		console.log('error getting FB user info', err);
+	});
 
 
 

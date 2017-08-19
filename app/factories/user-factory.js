@@ -33,7 +33,6 @@ var config = {
 			firebase.auth().signInWithPopup( provider)
 			.then( (data) => {
 				currentUser = data.user.uid;
-				// console.log("currentUser", currentUser);
 				resolve(data);
 		  })
 		  .catch( (err) => {
@@ -41,10 +40,8 @@ var config = {
 		  });
 		});
   };
-	// console.log("currentUser", currentUser);
 
 	let getUser = () => {
-		// console.log("currentUser", currentUser);
 		return currentUser;
 	};
 
@@ -60,8 +57,6 @@ var config = {
     return $q( (resolve, reject) => {
       $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
       .then( (userData) => {
-      	// let userKey = Obj;
-      	// console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
@@ -76,7 +71,6 @@ var config = {
   		let JsonUserObject = angular.toJson(userObject);
   		$http.post(`${FirebaseUrl}user.json`, JsonUserObject)
       .then( (userData) => {
-      	// console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
@@ -92,7 +86,6 @@ var config = {
   		let userKey = getUserKey();
   		$http.patch(`${FirebaseUrl}user/${userKey}.json`, JsonUserSources)
       .then( (userData) => {
-      	// console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
