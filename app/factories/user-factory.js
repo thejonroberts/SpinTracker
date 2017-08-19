@@ -12,10 +12,6 @@ var config = {
 
 	let currentUser = null;
 	let userKey = null;
-	// let userPreferences = FilterFactory.userSourceArr;
-	// let userObject = {
-	// 	uid: currentUser,
-	// };
 
 	let isAuthenticated = () => {
 		return $q( (resolve, reject) => {
@@ -65,7 +61,7 @@ var config = {
       $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
       .then( (userData) => {
       	// let userKey = Obj;
-      	console.log('userData', userData);
+      	// console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
@@ -80,7 +76,7 @@ var config = {
   		let JsonUserObject = angular.toJson(userObject);
   		$http.post(`${FirebaseUrl}user.json`, JsonUserObject)
       .then( (userData) => {
-      	console.log('userData', userData);
+      	// console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
@@ -92,15 +88,11 @@ var config = {
 
   let updateUserInfo = (userSourceArr) => {
   	return $q( (resolve, reject) => {
-  		// let userID = getUser();
-  		let JsonUserSources = angular.toJson(
-  		 {userSources: userSourceArr
-  		 	// ,  			uid: `${userID}`
-  		 	} );
+  		let JsonUserSources = angular.toJson( {userSources: userSourceArr} );
   		let userKey = getUserKey();
   		$http.patch(`${FirebaseUrl}user/${userKey}.json`, JsonUserSources)
       .then( (userData) => {
-      	console.log('userData', userData);
+      	// console.log('userData', userData);
         resolve(userData);
       })
       .catch( (err) => {
