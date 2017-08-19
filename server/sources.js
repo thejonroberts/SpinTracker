@@ -1,5 +1,26 @@
 'use strict';
 
+exports.Breitbart = {
+	//source info
+	name: "Breitbart",
+	source_id: "000",
+	filename: "Breitbart",
+	bias: "farRight",
+	feedURL: 'http://feeds.feedburner.com/breitbart?format=xml',
+	homepageURLSearch: "channel > link",
+	logoURLSearch: "channel image url",
+	lastUpdatedSearch: "channel > lastBuildDate",
+	//article info
+	headlineSearch: 'title',
+	linkSearch: "guid",
+  copySearch: "description",
+  imageURLSearch: "media\\:content",
+  bylineSearch: "dc\\:creator",
+  keywordSearch: "category",
+  dateSearch: "pubDate",
+  dateFormat: "ddd, DD MMM YYYY HH:mm:ss GMT"
+};
+
 exports.NewYorkTimes = {
 	//source info
 	name: "New York Times",

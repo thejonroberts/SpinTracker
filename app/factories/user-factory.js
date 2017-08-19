@@ -12,10 +12,9 @@ var config = {
 
 	let currentUser = null;
 	// let userPreferences = FilterFactory.userSourceArr;
-	let userObject = {
-		uid: currentUser,
-		// userSources: userPreferences
-	};
+	// let userObject = {
+	// 	uid: currentUser,
+	// };
 
 	let isAuthenticated = () => {
 		return $q( (resolve, reject) => {
@@ -82,12 +81,11 @@ var config = {
 	  });
 	};
 
-  let updateUserInfo = (userObject) => {
+  let updateUserInfo = (userSourceArr) => {
   	return $q( (resolve, reject) => {
-  		let userKey = userObject.id;
-  		delete userObject.id;
-  		let JsonUserObject = angular.toJson(userObject);
-  		$http.patch(`${FirebaseUrl}user/${userKey}`, JsonUserObject)
+  		let userKey = getUser();
+  		let JsonUserSources = angular.toJson( {userSources: userSourceArr} );
+  		$http.patch(`${FirebaseUrl}user/${userKey}`, JsonUserSources)
       .then( (userData) => {
       	console.log('userData', userData);
         resolve(userData);

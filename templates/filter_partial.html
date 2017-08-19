@@ -69,10 +69,10 @@
 			<label>My Sources</label>
 			<div class="form-check" ng-repeat="source in filter.sources">
 		    <label class="form-check-label">
-		      <input type="checkbox" class="form-check-input">
-		      <!-- ng-model -->
+		      <input type="checkbox" class="form-check-input" ng-model="filter.userSourceArr[source.index]">
 		      {{source.name}}
 		    </label>
 		  </div>
+		  <button ng-click="saveSources()">Save Sources</button>
 	  </div>
 	</form>

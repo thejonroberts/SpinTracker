@@ -25,11 +25,12 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	  	//assign firebase identifiers to key property, push to sourceArr
 			Object.keys(sourceData).forEach( (key) => {
 				sourceData[key].id= key;
-
+				sourceData[key].index = parseInt(sourceData[key].source_id);
 				// sourceData[key].userDisplay = $scope.filter[]
 
 				sourceArr.push(sourceData[key]);
 			});
+			console.log('sourceArr', sourceArr);
 	  	//add relevant source info to each article for dispaly and filtering
 	  	$scope.articles.forEach( (article) => {
 	  		sourceArr.forEach ( (source) => {
