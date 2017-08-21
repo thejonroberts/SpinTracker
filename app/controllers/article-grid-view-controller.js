@@ -63,7 +63,9 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   $scope.dayRangeCheck = (article) => {
   	if ($scope.filter.dayRange === -1) {
   		return true;
-  	} else if ( (moment() - moment(article.date)) < $scope.filter.dayRange) {
+  	} else if ( moment(article.date).isAfter( moment().subtract( $scope.filter.dayRange, 'days' ) ) ) {
+  		return true;
+  	} else {
   		return false;
   	}
   };
