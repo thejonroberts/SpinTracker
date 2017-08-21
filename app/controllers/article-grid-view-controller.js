@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory, UserFactory ) {
+SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, moment, ArticleFactory, FilterFactory, UserFactory ) {
 
 	$scope.articles = null;
 	//import search entry from FilterFactory
@@ -57,6 +57,14 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	//check current state of corresponding filter checkbox
   	let sourceInt = parseInt(article.source);
   	return $scope.filter.userSourceArr[sourceInt];
+  	}
+  };
+
+  $scope.dayRangeCheck = (article) => {
+  	if ($scope.filter.dayRange === -1) {
+  		return true;
+  	} else if ( (moment() - moment(article.date)) < $scope.filter.dayRange) {
+  		return false;
   	}
   };
 
