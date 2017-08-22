@@ -14,7 +14,7 @@
 			    <img class="w-20 rounded float-right" src="{{article.logoURL}}" alt="{{article.sourceName}} logo">
 		      <h5 class="mb-0">
 		        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
-		          {{article.headline}}
+		          {{$sanitize(article.headline)}}
 		        </a>
 		      </h5>
 		    </div>
