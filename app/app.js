@@ -1,6 +1,6 @@
 'use strict';
 
-let SpinTracker = angular.module("SpinTracker", ["ngRoute", "angularMoment"])
+let SpinTracker = angular.module("SpinTracker", ["ngRoute", "angularMoment", "ngSanitize"])
 .constant('FirebaseUrl', 'https://spintrack-faa88.firebaseio.com/');
 
 let isAuth = (UserFactory)  => {
