@@ -6,6 +6,12 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	//import search entry from FilterFactory
 	$scope.filter = FilterFactory;
 
+	function filterHtmlFromStrings(copy) {
+		let copyElement = angular.element('<span>').html(copy);
+		let filteredString = copyElement.text();
+		return (filteredString);
+	}
+
 	//get all FB articles
 	ArticleFactory.getAllArticles()
   .then( (articleData)  => {
@@ -13,6 +19,8 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 		//assign firebase identifiers to key property, push to articleArr
 		Object.keys(articleData).forEach( (key) => {
 			articleData[key].id= key;
+			articleData[key].copy = filterHtmlFromStrings(articleData[key].copy);
+			articleData[key].headline = filterHtmlFromStrings(articleData[key].headline);
 			articleArr.push(articleData[key]);
 		});
 		//assign all articles to scope.articles
@@ -77,12 +85,14 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	//load user saved sources
 	UserFactory.getUserInfo()
 	.then( (userData) => {
-		let userKey = Object.keys(userData)[0];
-		$scope.filter.userSourceArr = userData[userKey].userSources;
+		let userKey = Object.keys(userData.data)[0];
+		$scope.filter.userSourceArr = userData.data[userKey].userSources;
 	})
 	.catch( (err) => {
 		console.log('error getting FB user info', err);
 	});
+
+
 
 
 

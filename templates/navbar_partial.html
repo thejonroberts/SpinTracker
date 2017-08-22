@@ -1,13 +1,12 @@
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" ng-controller="NavbarController">
-  <div class="navbar-nav">
+  <div class="navbar-nav row d-flex justify-content-between col-md-12">
 	  <a class="navbar-brand" ng-href="#">SpinTrack</a>
-    <button class="nav-item nav-link" ng-click="logout()">Logout</button>
-    <!-- <a class="nav-item nav-link" href="#">Filter</a> -->
-    <form class="form-inline mt-2 mt-md-0" _lpchecked="1">
-    	<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <form class="form-inline mt-2 mt-md-0 col" _lpchecked="1">
+    	<div class="input-group mb-2 mr-sm-2 mb-sm-0 col-12">
           <input class="form-control" type="text" placeholder="Search" ng-model="search.searchTerm">
           <button class="input-group-addon btn btn-outline-success" ng-click="clearSearch()">X</button>
     	</div>
     </form>
+    <button class="nav-item nav-link btn btn-primary" ng-click="logout()">Logout</button>
   </div>
 </nav>

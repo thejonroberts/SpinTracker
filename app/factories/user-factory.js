@@ -57,7 +57,7 @@ var config = {
     return $q( (resolve, reject) => {
       $http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
       .then( (userData) => {
-        resolve(userData.data);
+        resolve(userData);
       })
       .catch( (err) => {
         console.log("error getting user info", err);
