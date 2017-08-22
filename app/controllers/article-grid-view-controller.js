@@ -86,6 +86,7 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	UserFactory.getUserInfo()
 	.then( (userData) => {
 		let userKey = Object.keys(userData.data)[0];
+		UserFactory.setUserKey(userKey);
 		$scope.filter.userSourceArr = userData.data[userKey].userSources;
 	})
 	.catch( (err) => {
