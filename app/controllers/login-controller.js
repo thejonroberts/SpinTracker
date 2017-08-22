@@ -12,9 +12,7 @@ SpinTracker.controller("LoginController", function($q, $http, $scope, $window, F
     	UserFactory.getUserInfo()
     	.then( (userFBData) => {
     		// grab key for user FB object
-    		console.log('userFBData', userFBData);
-    		let key = Object.keys(userFBData)[0];
-    		console.log('key', key);
+    		let key = Object.keys(userFBData.data)[0];
     		// if key does not exist, no user info; create new user FB entry
     		if ( !key ) {
       		let user = UserFactory.getUser();
@@ -44,7 +42,7 @@ SpinTracker.controller("LoginController", function($q, $http, $scope, $window, F
     			});
     		} else {
     			UserFactory.setUserKey(key);
-    			filter.userSourceArr = userFBData[key].userSources;
+    			filter.userSourceArr = userFBData.data[key].userSources;
           $window.location.href = '#!/news';
     		}
   		})

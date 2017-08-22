@@ -85,8 +85,8 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
 	//load user saved sources
 	UserFactory.getUserInfo()
 	.then( (userData) => {
-		let userKey = Object.keys(userData)[0];
-		$scope.filter.userSourceArr = userData[userKey].userSources;
+		let userKey = Object.keys(userData.data)[0];
+		$scope.filter.userSourceArr = userData.data[userKey].userSources;
 	})
 	.catch( (err) => {
 		console.log('error getting FB user info', err);
