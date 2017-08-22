@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "angular": "^1.6.5",
+    "angular-moment": "^1.0.1",
     "angular-route": "^1.6.5",
     "bootstrap": "^4.0.0-alpha.6",
     "firebase": "^4.1.5",

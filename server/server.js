@@ -27,7 +27,7 @@ cors_proxy.createServer({
 });
 
 //this must be reassigned to scrape per source in sources.js file
-const source  = require('./sources.js').Breitbart;
+// const source  = require('./sources.js').Breitbart;
 // const source  = require('./sources.js').NewYorkTimes;
 // const source  = require('./sources.js').NationalReview;
 // const source  = require('./sources.js').MSNBC;

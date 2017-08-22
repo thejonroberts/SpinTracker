@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, ArticleFactory, FilterFactory, UserFactory ) {
+SpinTracker.controller("ArticleGridViewController", function( $scope, $routeParams, moment, ArticleFactory, FilterFactory, UserFactory ) {
 
 	$scope.articles = null;
 	//import search entry from FilterFactory
@@ -60,13 +60,25 @@ SpinTracker.controller("ArticleGridViewController", function( $scope, $routePara
   	}
   };
 
+  $scope.dayRangeCheck = (article) => {
+  	if ($scope.filter.dayRange === -1) {
+  		return true;
+  	} else if ( moment(article.date).isAfter( moment().subtract( $scope.filter.dayRange, 'days' ) ) ) {
+  		return true;
+  	} else {
+  		return false;
+  	}
+  };
+
   $scope.saveSources = () => {
 		UserFactory.updateUserInfo($scope.filter.userSourceArr);
 	};
 
+	//load user saved sources
 	UserFactory.getUserInfo()
 	.then( (userData) => {
-		console.log('userData', userData);
+		let userKey = Object.keys(userData)[0];
+		$scope.filter.userSourceArr = userData[userKey].userSources;
 	})
 	.catch( (err) => {
 		console.log('error getting FB user info', err);

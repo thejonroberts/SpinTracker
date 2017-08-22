@@ -18,6 +18,8 @@ SpinTracker.factory("FilterFactory", function($q, $http, FirebaseUrl) {
 
 	let userSourceArr = [];
 
-  return { searchTerm, biasFilter, sources, userSourceArr, allSources };
+	let dayRange = -1;
+
+  return { searchTerm, biasFilter, sources, userSourceArr, allSources, dayRange };
 
 });
