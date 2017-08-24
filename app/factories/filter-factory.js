@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.factory("FilterFactory", function ($q, $http, FirebaseUrl) {
+SpinTracker.factory("FilterFactory", function () {
 	//navbar search term and filter parameters stored here
 	let biasFilter = {
 		farLeft: true,
