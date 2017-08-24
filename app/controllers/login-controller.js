@@ -46,8 +46,8 @@ SpinTracker.controller("LoginController", function ($q, $http, $scope, $window, 
 					.then((userFBData) => {
 						// grab key for user FB object
 						let key = Object.keys(userFBData.data)[0];
+						// if key does not exist, no user info; create new user FB entry
 						if (!key) {
-							// if key does not exist, no user info; create new user FB entry
 							createNewFbUser(UserFactory.getUser());
 						} else {
 							getUserFbInfo(key, userFBData);
