@@ -5,21 +5,18 @@ SpinTracker.controller("LoginController", function ($q, $http, $scope, $window, 
 	let filter = FilterFactory;
 
 	let createNewFbUser = (uid) => {
-		// let userObject = {
-		// 	uid: `${uid}`,
-		// 	userSources: []
-		// };
 		let userSources = [];
-		//set all sources to true for new user (in FB and FilterFactory)
+		//set all sources to true for new user
 		ArticleFactory.getAllSources()
 			.then((sourceData) => {
 				Object.keys(sourceData).forEach(() => {
 					userSources.push(true);
 					filter.userSourceArr.push(true);
 				});
+				//create new FB entry for user
 				UserFactory.createUserInfo({ uid, userSources })
 					.then((data) => {
-						// once user is created, store key and go to news list
+						// once user is created, store FB key and go to news list
 						UserFactory.setUserKey(data.name);
 						$window.location.href = '#!/news';
 					})
