@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("NavbarController", function ($scope, $window, UserFactory, FilterFactory, ArticleFactory) {
+SpinTracker.controller("NavbarController", function ($scope, $window, UserFactory, FilterFactory) {
 
 	$scope.search = FilterFactory;
 
@@ -10,7 +10,7 @@ SpinTracker.controller("NavbarController", function ($scope, $window, UserFactor
 
 	$scope.logout = () => {
 		UserFactory.logoutUser()
-			.then((data) => {
+			.then(() => {
 				$window.location.href = "#!/";
 			});
 	};
