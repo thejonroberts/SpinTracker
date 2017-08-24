@@ -33,9 +33,6 @@ cors_proxy.createServer({
 // const source  = require('./sources.js').MSNBC;
 // const source  = require('./sources.js').NationalPublicRadio;
 
-// let momentDate = moment("Thu, 10 Aug 2017 16:24:43 GMT ").format("ddd MMM Do YY");
-// console.log('momentDate', momentDate);
-
 function scrapePage(feedURL) {
 	return new Promise((resolve, reject) => {
 		//make an HTTP request for the page to be scraped

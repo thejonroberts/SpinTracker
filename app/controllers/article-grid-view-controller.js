@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("ArticleGridViewController", function ($scope, $routeParams, moment, ArticleFactory, FilterFactory, UserFactory) {
+SpinTracker.controller("ArticleGridViewController", function ($scope, moment, ArticleFactory, FilterFactory, UserFactory) {
 
 	$scope.articles = null;
 	//import search entry from FilterFactory
@@ -11,7 +11,6 @@ SpinTracker.controller("ArticleGridViewController", function ($scope, $routePara
 		let filteredString = copyElement.text();
 		return (filteredString);
 	}
-
 	//get all FB articles
 	ArticleFactory.getAllArticles()
 		.then((articleData) => {
@@ -25,7 +24,6 @@ SpinTracker.controller("ArticleGridViewController", function ($scope, $routePara
 			});
 			//assign all articles to scope.articles
 			$scope.articles = articleArr;
-
 			//get all sources
 			ArticleFactory.getAllSources()
 				.then((sourceData) => {
@@ -81,7 +79,6 @@ SpinTracker.controller("ArticleGridViewController", function ($scope, $routePara
 	$scope.saveSources = () => {
 		UserFactory.updateUserInfo($scope.filter.userSourceArr);
 	};
-
 	//load user saved sources
 	UserFactory.getUserInfo()
 		.then((userData) => {
