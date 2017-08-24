@@ -7,7 +7,6 @@ SpinTracker.factory("ArticleFactory", function ($q, $http, FirebaseUrl) {
 		return $q((resolve, reject) => {
 			$http.get(`${FirebaseUrl}articles.json`)
 				.then((articleData) => {
-					// console.log('articleData', articleData);
 					resolve(articleData.data);
 				})
 				.catch((err) => {
@@ -20,21 +19,6 @@ SpinTracker.factory("ArticleFactory", function ($q, $http, FirebaseUrl) {
 		return $q((resolve, reject) => {
 			$http.get(`${FirebaseUrl}/sources.json`)
 				.then((sourceInfo) => {
-					// console.log('sourceInfo', sourceInfo);
-					resolve(sourceInfo.data);
-				})
-				.catch((err) => {
-					console.log('err grabbing source from FB', err);
-					reject(err);
-				});
-		});
-	};
-
-	let getSourceInfo = (source_id) => {
-		return $q((resolve, reject) => {
-			$http.get(`${FirebaseUrl}/sources.json?orderBy="source_id"&equalTo="${source_id}"`)
-				.then((sourceInfo) => {
-					// console.log('sourceInfo', sourceInfo);
 					resolve(sourceInfo.data);
 				})
 				.catch((err) => {
