@@ -1,60 +1,60 @@
-	<form id="filterForm" class="flex-column p-2">
+<form id="filterForm" class="flex-column p-2">
 	<legend>Filters:</legend>
-		<!-- sources filter -->
-		<div class="form-group">
-			<label>Sources</label>
-	    <div class="form-check">
-	      <label class="form-check-label">
+	<!-- sources filter -->
+	<div class="form-group">
+		<label>Sources</label>
+		<div class="form-check">
+			<label class="form-check-label">
 	        <input type="radio" class="form-check-input" name="SourcesRadio" id="allSourcesRadio" ng-model="filter.allSources" ng-value="true" checked="checked">
 	        All Sources
 	      </label>
-	    </div>
-	    <div class="form-check">
-		    <label class="form-check-label">
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
 	        <input type="radio" class="form-check-input" name="SourcesRadio" id="mySourcesRadio" ng-model="filter.allSources" ng-value="false">
 	        My Sources
 	      </label>
-	    </div>
 		</div>
-		<!-- bias radios -->
-		<div class="form-group">
-			<label>Bias</label>
-			<div class="form-check">
-		    <label class="form-check-label">
+	</div>
+	<!-- bias radios -->
+	<div class="form-group">
+		<label>Bias</label>
+		<div class="form-check">
+			<label class="form-check-label">
 		      <input type="checkbox" class="form-check-input" ng-model="filter.biasFilter.farLeft">
 		      Far Left
 		    </label>
-		  </div>
-		  <div class="form-check">
-		    <label class="form-check-label">
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
 		      <input type="checkbox" class="form-check-input" ng-model="filter.biasFilter.left">
 		      Left
 		    </label>
-		  </div>
-		  <div class="form-check">
-		    <label class="form-check-label">
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
 		      <input type="checkbox" class="form-check-input" ng-model="filter.biasFilter.center">
 		      Center
 		    </label>
-		  </div>
-		  <div class="form-check">
-		    <label class="form-check-label">
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
 		      <input type="checkbox" class="form-check-input" ng-model="filter.biasFilter.right">
 		      Right
 		    </label>
-		  </div>
-		  <div class="form-check">
-		    <label class="form-check-label">
+		</div>
+		<div class="form-check">
+			<label class="form-check-label">
 		      <input type="checkbox" class="form-check-input" ng-model="filter.biasFilter.farRight">
 		      Far Right
 		    </label>
-		  </div>
 		</div>
-		<!-- date -->
+	</div>
+	<!-- date -->
+	<div class="form-group">
 		<div class="form-group">
-			<div class="form-group">
-		    <label for="exampleSelect1">Within the past:</label>
-		    <select class="form-control" id="exampleSelect1" ng-model="filter.dayRange">
+			<label for="exampleSelect1">Within the past:</label>
+			<select class="form-control" id="exampleSelect1" ng-model="filter.dayRange">
 		      <option ng-value="1">day</option>
 		      <option ng-value="2">2 days</option>
 		      <option ng-value="3">3 days</option>
@@ -63,17 +63,17 @@
 		      <option ng-value="365">year</option>
 		      <option ng-value="-1" selected>ever</option>
 		    </select>
-		  </div>
 		</div>
-		<!-- SOURCES - USER -->
-		<div class="form-group">
-			<label>My Sources</label>
-			<div class="form-check" ng-repeat="source in filter.sources">
-		    <label class="form-check-label">
+	</div>
+	<!-- SOURCES - USER -->
+	<div class="form-group">
+		<label>My Sources</label>
+		<div class="form-check" ng-repeat="source in filter.sources">
+			<label class="form-check-label">
 		      <input type="checkbox" class="form-check-input" ng-model="filter.userSourceArr[source.index]" checked>
 		      {{source.name}}
 		    </label>
-		  </div>
-		  <button class="btn btn-primary" ng-click="saveSources()">Save Sources</button>
-	  </div>
-	</form>
+		</div>
+		<button class="btn btn-primary" ng-click="saveSources()">Save Sources</button>
+	</div>
+</form>

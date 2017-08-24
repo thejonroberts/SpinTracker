@@ -13,12 +13,12 @@ exports.Breitbart = {
 	//article info
 	headlineSearch: 'title',
 	linkSearch: "guid",
-  copySearch: "description",
-  imageURLSearch: "media\\:content",
-  bylineSearch: "dc\\:creator",
-  keywordSearch: "category",
-  dateSearch: "pubDate",
-  dateFormat: "ddd, DD MMM YYYY HH:mm:ss GMT"
+	copySearch: "description",
+	imageURLSearch: "media\\:content",
+	bylineSearch: "dc\\:creator",
+	keywordSearch: "category",
+	dateSearch: "pubDate",
+	dateFormat: "ddd, DD MMM YYYY HH:mm:ss GMT"
 };
 
 exports.NewYorkTimes = {
@@ -34,12 +34,12 @@ exports.NewYorkTimes = {
 	//article info
 	headlineSearch: 'title',
 	linkSearch: "guid",
-  copySearch: "description",
-  imageURLSearch: "media\\:content",
-  bylineSearch: "dc\\:creator",
-  keywordSearch: "category",
-  dateSearch: "pubDate",
-  dateFormat: "ddd, DD MMM YYYY HH:mm:ss GMT"
+	copySearch: "description",
+	imageURLSearch: "media\\:content",
+	bylineSearch: "dc\\:creator",
+	keywordSearch: "category",
+	dateSearch: "pubDate",
+	dateFormat: "ddd, DD MMM YYYY HH:mm:ss GMT"
 };
 
 exports.NationalReview = {
@@ -55,11 +55,11 @@ exports.NationalReview = {
 	//article info
 	headlineSearch: 'title',
 	linkSearch: "link",
-  copySearch: "description",
-  imageURLSearch: "media\\:content",
-  bylineSearch: "dc\\:creator",
-  keywordSearch: "category",
-  dateSearch: "pubDate"
+	copySearch: "description",
+	imageURLSearch: "media\\:content",
+	bylineSearch: "dc\\:creator",
+	keywordSearch: "category",
+	dateSearch: "pubDate"
 };
 
 exports.MSNBC = {
@@ -75,11 +75,11 @@ exports.MSNBC = {
 	//article info
 	headlineSearch: 'title',
 	linkSearch: "link",
-  copySearch: "description",
-  imageURLSearch: "media\\:thumbnail",
-  bylineSearch: false,
-  keywordSearch: false,
-  dateSearch: "pubDate"
+	copySearch: "description",
+	imageURLSearch: "media\\:thumbnail",
+	bylineSearch: false,
+	keywordSearch: false,
+	dateSearch: "pubDate"
 };
 
 exports.NationalPublicRadio = {
@@ -95,9 +95,9 @@ exports.NationalPublicRadio = {
 	//article info
 	headlineSearch: 'title',
 	linkSearch: "guid",
-  copySearch: "description",
-  imageURLSearch: "content\\:encoded img",
-  bylineSearch: "dc\\:creator",
-  keywordSearch: "category",
-  dateSearch: "pubDate"
+	copySearch: "description",
+	imageURLSearch: "content\\:encoded img",
+	bylineSearch: "dc\\:creator",
+	keywordSearch: "category",
+	dateSearch: "pubDate"
 };
