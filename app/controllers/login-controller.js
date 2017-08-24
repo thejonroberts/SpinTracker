@@ -1,6 +1,6 @@
 'use strict';
 
-SpinTracker.controller("LoginController", function ($q, $http, $scope, $window, UserFactory, FilterFactory, ArticleFactory) {
+SpinTracker.controller("LoginController", function ($scope, $window, UserFactory, FilterFactory, ArticleFactory) {
 
 	let filter = FilterFactory;
 
