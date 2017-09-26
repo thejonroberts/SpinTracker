@@ -1,30 +1,29 @@
 'use strict';
 
-SpinTracker.controller("LoginController", function ($scope, $window, UserFactory, FilterFactory, ArticleFactory) {
-
+SpinTracker.controller('LoginController', function($scope, $window, UserFactory, FilterFactory, ArticleFactory) {
 	let filter = FilterFactory;
 
-	let createNewFbUser = (uid) => {
+	let createNewFbUser = uid => {
 		let userSources = [];
 		//set all sources to true for new user
 		ArticleFactory.getAllSources()
-			.then((sourceData) => {
+			.then(sourceData => {
 				Object.keys(sourceData).forEach(() => {
 					userSources.push(true);
 					filter.userSourceArr.push(true);
 				});
 				//create new FB entry for user
 				UserFactory.createUserInfo({ uid, userSources })
-					.then((data) => {
+					.then(data => {
 						// once user is created, store FB key and go to news list
 						UserFactory.setUserKey(data.name);
 						$window.location.href = '#!/news';
 					})
-					.catch((err) => {
+					.catch(err => {
 						console.log('error creating User', err);
 					});
 			})
-			.catch((err) => {
+			.catch(err => {
 				console.log('err getting sources in user creation', err);
 			});
 	};
@@ -43,7 +42,7 @@ SpinTracker.controller("LoginController", function ($scope, $window, UserFactory
 			.then(() => {
 				// get FB info for user
 				UserFactory.getUserInfo()
-					.then((userFBData) => {
+					.then(userFBData => {
 						// grab key for user FB object
 						let key = Object.keys(userFBData.data)[0];
 						// if key does not exist, no user info; create new user FB entry
@@ -53,13 +52,12 @@ SpinTracker.controller("LoginController", function ($scope, $window, UserFactory
 							getUserFbInfo(key, userFBData);
 						}
 					})
-					.catch((err) => {
+					.catch(err => {
 						console.log('error creating user', err);
 					});
 			})
-			.catch((err) => {
+			.catch(err => {
 				console.log('error getting user', err);
 			});
 	};
-
 });

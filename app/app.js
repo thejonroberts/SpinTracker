@@ -1,22 +1,22 @@
 'use strict';
 
-let SpinTracker = angular.module("SpinTracker", ["ngRoute", "angularMoment", "ngSanitize"])
+let SpinTracker = angular
+	.module('SpinTracker', ['ngRoute', 'angularMoment', 'ngSanitize'])
 	.constant('FirebaseUrl', 'https://spintrack-faa88.firebaseio.com/');
 
-let isAuth = (UserFactory) => {
+let isAuth = UserFactory => {
 	return new Promise((resolve, reject) => {
-		UserFactory.isAuthenticated()
-			.then((userExistence) => {
-				if (userExistence) {
-					resolve();
-				} else {
-					reject();
-				}
-			});
+		UserFactory.isAuthenticated().then(userExistence => {
+			if (userExistence) {
+				resolve();
+			} else {
+				reject();
+			}
+		});
 	});
 };
 
-SpinTracker.config(($routeProvider) => {
+SpinTracker.config($routeProvider => {
 	$routeProvider
 		.when('/news', {
 			templateUrl: 'templates/article_grid.html',

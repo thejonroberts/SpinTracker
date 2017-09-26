@@ -1,7 +1,6 @@
 'use strict';
 
-SpinTracker.factory("UserFactory", function ($q, $http, FirebaseUrl, fbCreds) {
-
+SpinTracker.factory('UserFactory', function($q, $http, FirebaseUrl, fbCreds) {
 	var config = {
 		apiKey: fbCreds.apiKey,
 		authDomain: fbCreds.authDomain
@@ -15,12 +14,12 @@ SpinTracker.factory("UserFactory", function ($q, $http, FirebaseUrl, fbCreds) {
 
 	let isAuthenticated = () => {
 		return $q((resolve, reject) => {
-			firebase.auth().onAuthStateChanged((user) => {
+			firebase.auth().onAuthStateChanged(user => {
 				if (user) {
 					currentUser = user.uid;
 					resolve(true);
-				}
-				else { //on logout we need to set it back to null.
+				} else {
+					//on logout we need to set it back to null.
 					currentUser = null;
 					resolve(false);
 				}
@@ -30,13 +29,15 @@ SpinTracker.factory("UserFactory", function ($q, $http, FirebaseUrl, fbCreds) {
 
 	let loginUser = () => {
 		return $q((resolve, reject) => {
-			firebase.auth().signInWithPopup(provider)
-				.then((data) => {
+			firebase
+				.auth()
+				.signInWithPopup(provider)
+				.then(data => {
 					currentUser = data.user.uid;
 					resolve(data);
 				})
-				.catch((err) => {
-					console.log("error loggin in", err.message);
+				.catch(err => {
+					console.log('error loggin in', err.message);
 				});
 		});
 	};
@@ -45,7 +46,7 @@ SpinTracker.factory("UserFactory", function ($q, $http, FirebaseUrl, fbCreds) {
 		return currentUser;
 	};
 
-	let setUserKey = (FBkey) => {
+	let setUserKey = FBkey => {
 		userKey = FBkey;
 	};
 
@@ -55,53 +56,67 @@ SpinTracker.factory("UserFactory", function ($q, $http, FirebaseUrl, fbCreds) {
 
 	let getUserInfo = () => {
 		return $q((resolve, reject) => {
-			$http.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
-				.then((userData) => {
+			$http
+				.get(`${FirebaseUrl}user.json?orderBy="uid"&equalTo="${currentUser}"`)
+				.then(userData => {
 					resolve(userData);
 				})
-				.catch((err) => {
-					console.log("error getting user info", err);
+				.catch(err => {
+					console.log('error getting user info', err);
 					reject(err);
 				});
 		});
 	};
 
-	let createUserInfo = (userObject) => {
+	let createUserInfo = userObject => {
 		return $q((resolve, reject) => {
 			let JsonUserObject = angular.toJson(userObject);
-			$http.post(`${FirebaseUrl}user.json`, JsonUserObject)
-				.then((userData) => {
+			$http
+				.post(`${FirebaseUrl}user.json`, JsonUserObject)
+				.then(userData => {
 					resolve(userData);
 				})
-				.catch((err) => {
-					console.log("error getting user info", err);
+				.catch(err => {
+					console.log('error getting user info', err);
 					reject(err);
 				});
 		});
 	};
 
-	let updateUserInfo = (userSourceArr) => {
+	let updateUserInfo = userSourceArr => {
 		return $q((resolve, reject) => {
 			let JsonUserSources = angular.toJson({ userSources: userSourceArr });
 			let userKey = getUserKey();
-			$http.patch(`${FirebaseUrl}user/${userKey}.json`, JsonUserSources)
-				.then((userData) => {
+			$http
+				.patch(`${FirebaseUrl}user/${userKey}.json`, JsonUserSources)
+				.then(userData => {
 					resolve(userData);
 				})
-				.catch((err) => {
-					console.log("error getting user info", err);
+				.catch(err => {
+					console.log('error getting user info', err);
 					reject(err);
 				});
 		});
 	};
 
 	let logoutUser = () => {
-		return firebase.auth().signOut()
-			.catch((err) => {
-				console.log("Error logging out", err.message);
+		return firebase
+			.auth()
+			.signOut()
+			.catch(err => {
+				console.log('Error logging out', err.message);
 			});
 	};
 
-	return { loginUser, isAuthenticated, getUser, logoutUser, getUserInfo, createUserInfo, updateUserInfo, getUserKey, setUserKey };
-
+	return {
+		loginUser,
+		isAuthenticated,
+		getUser,
+		logoutUser,
+		getUserInfo,
+		createUserInfo,
+		updateUserInfo,
+		getUserKey,
+		setUserKey
+	};
 });
